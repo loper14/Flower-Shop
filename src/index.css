@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+
+  font-family: Poppins, sans-serif;
+}
+
+.activeCategory {
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 40px;
+  color: #46a358;
+}
