@@ -1,10 +1,10 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Wrapper } from "./style";
 import "./style.css";
-import logoImg from "../../assets/icons/logo.svg";
-import img1 from "../../assets/icons/search.svg";
-import img2 from "../../assets/icons/shop.svg";
-import img3 from "../../assets/icons/Logout.svg";
+import logoImg from "../../../assets/icons/logo.svg";
+import img1 from "../../../assets/icons/search.svg";
+import img2 from "../../../assets/icons/shop.svg";
+import img3 from "../../../assets/icons/Logout.svg";
 import { Outlet, NavLink } from "react-router-dom";
 
 const Navbar = () => {

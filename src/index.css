@@ -1,14 +1,15 @@
 body {
   margin: 0;
-
   font-family: Poppins, sans-serif;
 }
 
 .activeCategory {
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 40px;
-  color: #46a358;
+  transition: padding-left 0.3s ease 0s;
+  background: rgba(70, 163, 88, 0.95);
+  color: rgb(255, 255, 255);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.activeCategory .category_name {
+  margin-left: 20px;
 }

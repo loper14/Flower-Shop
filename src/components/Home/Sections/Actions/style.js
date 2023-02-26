@@ -21,11 +21,28 @@ Wrapper.CategoriesTitle = styled.div`
 Wrapper.Category = styled.div``;
 Wrapper.CategoryItem = styled.div`
   display: flex;
-  grid-gap: 137px;
+  grid-gap: 100px;
   margin-bottom: 25px;
+  padding: 8px;
   cursor: pointer;
+  ${(props) =>
+    !props.active
+      ? `:hover {
+      .category_name {
+        margin-left: 25px;
+      }
+       border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+      transition: padding-left 0.3s ease 0s;
+      -moz-box-pack: justify;
+      padding-right: 10px;
+      background: rgba(70, 163, 88, 0.95);
+      color: rgb(255, 255, 255);
+    }`
+      : ""}
 `;
 Wrapper.CategoryItemTitle = styled.div`
+  transition: all 0.3s ease;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -47,6 +64,7 @@ Wrapper.RangeTitle = styled.div`
   font-size: 18px;
   line-height: 16px;
   color: #3d3d3d;
+  padding-left: 25px;
 `;
 Wrapper.Prices = styled.div`
   display: flex;
@@ -105,16 +123,36 @@ Wrapper.Size = styled.div`
   font-size: 18px;
   line-height: 16px;
   color: #3d3d3d;
-  margin-top: 54px;
+  margin-top: 34px;
   margin-bottom: 10px;
+  padding-left: 25px;
 `;
 Wrapper.SizeItem = styled.div`
+  transition: all 0.3s ease 0s;
   display: flex;
   grid-gap: 170px;
   padding-left: 15px;
+  height: 35px;
+  margin-bottom: 7px;
   cursor: pointer;
+  ${(props) =>
+    !props.active
+      ? `:hover {
+      .category_name {
+        margin-left: 20px;
+      }
+       border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+      transition: padding-left 0.3s ease 0s;
+      -moz-box-pack: justify;
+      padding-right: 10px;
+      background: rgba(70, 163, 88, 0.95);
+      color: rgb(255, 255, 255);
+    }`
+      : ""}
 `;
 Wrapper.SizeTitle = styled.div`
+  transition: all 0.3s ease;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -130,5 +168,6 @@ Wrapper.SizeCount = styled.div`
   width: 30px;
 `;
 Wrapper.SaleImg = styled.img`
-  margin-top: 10px;
+  transform: scaleY(0.8);
+  margin-top: -40px;
 `;

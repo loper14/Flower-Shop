@@ -52,8 +52,9 @@ Wrapper.CardContainer = styled.div`
   margin-top: 30px;
 `;
 Wrapper.ProductCard = styled.div`
-  width: 230px;
+  width: 220px;
   height: 350px;
+
   :hover {
     .hoverItem {
       display: flex;

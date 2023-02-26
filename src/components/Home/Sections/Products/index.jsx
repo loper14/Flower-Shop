@@ -3,12 +3,16 @@ import { Wrapper } from "./style";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Pagination, Space } from "antd";
 import "../style.css";
-import { data } from "../../../mock/Categories/data";
+import { data } from "../../../../mock/Categories/data";
+import { useSelector, useDispatch } from "react-redux";
+import { setMapData, sortMapData } from "../../../../redux/slice";
 
 const Products = () => {
-  let [mapData, setMapData] = useState(data);
+  let { mapData } = useSelector((state) => state.data);
+  let { category, minMax } = useSelector((state) => state.data);
   let [showCard, setShowCard] = useState([0, 8]);
   let [page, setPage] = useState();
+  let dispatch = useDispatch();
 
   useEffect(() => {
     switch (page) {
@@ -22,29 +26,63 @@ const Products = () => {
         return;
     }
   }, [page]);
+  // useEffect(() => {
+  //   let beforeData = mapData[category].filter(
+  //     (value) => value.price > minMax[0] && value.price < minMax[1]
+  //   );
+  //   dispatch(
+  //     setMapData({
+  //       ...mapData,
+  //       [category]: beforeData,
+  //     })
+  //   );
+  // }, [minMax]);
   const items = [
     {
       label: (
-        <Wrapper.DropDownItem href="https://www.antgroup.com">
-          1st menu item
+        <Wrapper.DropDownItem
+          onClick={() => {
+            dispatch(setMapData({ ...mapData, [category]: data[category] }));
+          }}
+        >
+          Default sorting
         </Wrapper.DropDownItem>
       ),
       key: "0",
     },
     {
       label: (
-        <Wrapper.DropDownItem href="https://www.aliyun.com">
-          2nd menu item
+        <Wrapper.DropDownItem
+          onClick={() => {
+            let sortedData = mapData[category].sort((a, b) =>
+              a.price < b.price ? 0 : 1
+            );
+            dispatch(setMapData({ ...mapData, [category]: sortedData }));
+          }}
+        >
+          The cheapest
         </Wrapper.DropDownItem>
       ),
       key: "1",
     },
 
     {
-      label: <Wrapper.DropDownItem>3rd menu item</Wrapper.DropDownItem>,
+      label: (
+        <Wrapper.DropDownItem
+          onClick={() => {
+            let sortedData = data[category].sort((a, b) =>
+              a.price > b.price ? 0 : 1
+            );
+            dispatch(setMapData(sortedData));
+          }}
+        >
+          Most expensive
+        </Wrapper.DropDownItem>
+      ),
       key: "3",
     },
   ];
+
   let [active, setActive] = useState("all");
   return (
     <Wrapper>
@@ -52,19 +90,28 @@ const Products = () => {
         <Wrapper.ProductSection>
           <Wrapper.ProductSectionTitle
             className={active === "all" ? "activePr" : ""}
-            onClick={() => setActive("all")}
+            onClick={() => {
+              setActive("all");
+              dispatch(setMapData());
+            }}
           >
             All Plants
           </Wrapper.ProductSectionTitle>
           <Wrapper.ProductSectionTitle
             className={active === "new" ? "activePr" : ""}
-            onClick={() => setActive("new")}
+            onClick={() => {
+              setActive("new");
+              let sortedData = data[category].sort((a, b) =>
+                a.date.getTime() > b.date.getTime() ? -1 : 1
+              );
+              dispatch(setMapData(sortedData));
+            }}
           >
             New Arrival
           </Wrapper.ProductSectionTitle>
           <Wrapper.ProductSectionTitle
             className={active === "sale" ? "activePr" : ""}
-            onClick={() => setActive("sale")}
+            onClick={() => dispatch(sortMapData())}
           >
             Sale
           </Wrapper.ProductSectionTitle>
@@ -87,7 +134,7 @@ const Products = () => {
         </Wrapper.ProductSort>
       </Wrapper.ProductSections>
       <Wrapper.CardContainer>
-        {mapData["House Plants"].map(
+        {mapData[category]?.map(
           (value, index) =>
             index >= showCard[0] &&
             index <= showCard[1] && (
@@ -119,7 +166,11 @@ const Products = () => {
         onChange={(e) => setPage(e.toFixed())}
         defaultCurrent={1}
         total={30}
-        style={{ float: "right", marginRight: "20px" }}
+        style={{
+          float: "right",
+          marginRight: "40px",
+          marginTop: "20px",
+        }}
       />
     </Wrapper>
   );
