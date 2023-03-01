@@ -17,7 +17,7 @@ const Footer = () => {
       <Wrapper.Head>
         <Wrapper.HeadLogo>
           <Wrapper.HeadLogoImg src={logo} />
-          <Wrapper.HeadLogoText>GREENSHOP</Wrapper.HeadLogoText>
+          <Wrapper.HeadLogoText>GREENSHOP12</Wrapper.HeadLogoText>
         </Wrapper.HeadLogo>
         <Wrapper.HeadItem>
           <Wrapper.HeadItemImg src={location} />
