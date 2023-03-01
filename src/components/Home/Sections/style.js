@@ -6,6 +6,6 @@ export let Wrapper = styled.div`
   height: 1300px;
 `;
 Wrapper.Container = styled.div`
-  width: 1100px;
+  width: 1400px;
   margin: 0 auto;
 `;

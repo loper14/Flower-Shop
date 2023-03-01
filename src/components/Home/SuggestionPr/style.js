@@ -5,10 +5,11 @@ export let Wrapper = styled.div`
 `;
 Wrapper.ItemContainer = styled.div`
   display: flex;
+  justify-content: space-between;
 `;
 Wrapper.Item = styled.div`
   display: flex;
-  width: 586px;
+  width: 660px;
   height: 250px;
   background: #fbfbfb;
   justify-content: space-between;
@@ -21,7 +22,7 @@ Wrapper.ItemText = styled.div`
   padding-top: 20px;
 `;
 Wrapper.ItemTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -49,7 +50,7 @@ Wrapper.ItemBtn = styled.button`
   height: 35px;
   background: #46a358;
   border-radius: 6px;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

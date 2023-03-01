@@ -5,7 +5,15 @@ import { Dropdown, Pagination, Space } from "antd";
 import "../style.css";
 import { data } from "../../../../mock/Categories/data";
 import { useSelector, useDispatch } from "react-redux";
-import { setMapData, sortMapData } from "../../../../redux/slice";
+import {
+  setMapData,
+  sortDataBySale,
+  sortDataByNews,
+  sortDataByAll,
+  mostExpensive,
+  theCheapest,
+  defaultSorting,
+} from "../../../../redux/slice";
 
 const Products = () => {
   let { mapData } = useSelector((state) => state.data);
@@ -26,23 +34,13 @@ const Products = () => {
         return;
     }
   }, [page]);
-  // useEffect(() => {
-  //   let beforeData = mapData[category].filter(
-  //     (value) => value.price > minMax[0] && value.price < minMax[1]
-  //   );
-  //   dispatch(
-  //     setMapData({
-  //       ...mapData,
-  //       [category]: beforeData,
-  //     })
-  //   );
-  // }, [minMax]);
+
   const items = [
     {
       label: (
         <Wrapper.DropDownItem
           onClick={() => {
-            dispatch(setMapData({ ...mapData, [category]: data[category] }));
+            dispatch(defaultSorting());
           }}
         >
           Default sorting
@@ -54,10 +52,7 @@ const Products = () => {
       label: (
         <Wrapper.DropDownItem
           onClick={() => {
-            let sortedData = mapData[category].sort((a, b) =>
-              a.price < b.price ? 0 : 1
-            );
-            dispatch(setMapData({ ...mapData, [category]: sortedData }));
+            dispatch(theCheapest());
           }}
         >
           The cheapest
@@ -70,10 +65,7 @@ const Products = () => {
       label: (
         <Wrapper.DropDownItem
           onClick={() => {
-            let sortedData = data[category].sort((a, b) =>
-              a.price > b.price ? 0 : 1
-            );
-            dispatch(setMapData(sortedData));
+            dispatch(mostExpensive());
           }}
         >
           Most expensive
@@ -92,7 +84,7 @@ const Products = () => {
             className={active === "all" ? "activePr" : ""}
             onClick={() => {
               setActive("all");
-              dispatch(setMapData());
+              dispatch(sortDataByAll());
             }}
           >
             All Plants
@@ -101,17 +93,17 @@ const Products = () => {
             className={active === "new" ? "activePr" : ""}
             onClick={() => {
               setActive("new");
-              let sortedData = data[category].sort((a, b) =>
-                a.date.getTime() > b.date.getTime() ? -1 : 1
-              );
-              dispatch(setMapData(sortedData));
+              dispatch(sortDataByNews());
             }}
           >
             New Arrival
           </Wrapper.ProductSectionTitle>
           <Wrapper.ProductSectionTitle
             className={active === "sale" ? "activePr" : ""}
-            onClick={() => dispatch(sortMapData())}
+            onClick={() => {
+              setActive("sale");
+              dispatch(sortDataBySale());
+            }}
           >
             Sale
           </Wrapper.ProductSectionTitle>

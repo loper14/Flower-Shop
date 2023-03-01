@@ -3,7 +3,7 @@ import styled from "styled-components";
 export let Wrapper = styled.div``;
 Wrapper.Head = styled.div`
   display: flex;
-  grid-gap: 75px;
+  grid-gap: 95px;
   padding-left: 20px;
   background: rgba(70, 163, 88, 0.1);
   height: 88px;
@@ -29,12 +29,13 @@ Wrapper.Body = styled.div`
   background: #fbfbfb;
   height: 236px;
   display: flex;
-  grid-gap: 175px;
   padding-left: 23px;
+  justify-content: center;
+  grid-gap: 250px;
 `;
 Wrapper.BodyItem = styled.div``;
 Wrapper.BodyItemTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -46,7 +47,7 @@ Wrapper.BodyItemTitle = styled.div`
 Wrapper.BodyItemText = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 30px;
   color: #727272;
   cursor: pointer;
@@ -68,7 +69,7 @@ Wrapper.BodyMediaImg = styled.img`
 `;
 Wrapper.WeAccept = styled.div`
   padding-top: 37px;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;

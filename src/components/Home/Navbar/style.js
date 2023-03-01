@@ -6,7 +6,7 @@ export let Wrapper = styled.div`
   padding-top: 20px;
 `;
 Wrapper.Container = styled.div`
-  width: 1100px;
+  width: 1400px;
   margin: 0 auto;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
 `;
@@ -23,19 +23,19 @@ Wrapper.Logo = styled.div`
 `;
 Wrapper.LogoText = styled.div`
   color: #46a358;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
 `;
 Wrapper.LogoImg = styled.img``;
 Wrapper.Navbar = styled.div`
   display: flex;
-  grid-gap: 20px;
+  grid-gap: 30px;
 `;
 Wrapper.NavbarText = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   color: #3d3d3d;
   margin-bottom: 5px;

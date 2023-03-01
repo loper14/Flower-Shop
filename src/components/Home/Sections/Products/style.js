@@ -8,7 +8,7 @@ import {
 export let Wrapper = styled.div``;
 Wrapper.ProductSections = styled.div`
   display: flex;
-  grid-gap: 295px;
+  justify-content: space-between;
 `;
 Wrapper.ProductSection = styled.div`
   display: flex;
@@ -27,14 +27,14 @@ Wrapper.ProductSort = styled.div`
   grid-gap: 8px;
 `;
 Wrapper.DropDown = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   color: #3d3d3d;
   cursor: pointer;
-  width: 120px;
+  width: 150px;
 `;
 Wrapper.DropDownItem = styled.div``;
 Wrapper.ProductSortTitle = styled.div`
@@ -45,10 +45,11 @@ Wrapper.ProductSortTitle = styled.div`
   color: #3d3d3d;
 `;
 Wrapper.CardContainer = styled.div`
-  width: 800px;
+  width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 50px;
+  grid-column-gap: 150px;
+  grid-row-gap: 50px;
   margin-top: 30px;
 `;
 Wrapper.ProductCard = styled.div`
@@ -67,7 +68,7 @@ Wrapper.CardImg = styled.img`
   height: 230px;
 `;
 Wrapper.Sale = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   background: rgb(70, 163, 89);
   width: 50px;
   border-top-left-radius: 5px;
@@ -97,7 +98,7 @@ Wrapper.ProductDate = styled.div`
   color: rgb(61, 61, 61);
 `;
 Wrapper.ProductPrice = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;

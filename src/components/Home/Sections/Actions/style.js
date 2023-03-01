@@ -3,12 +3,12 @@ import { Slider } from "antd";
 
 export let Wrapper = styled.div`
   background: #fbfbfb;
-  width: 310px;
+  width: 400px;
   height: 1212px;
 `;
 Wrapper.Categories = styled.div``;
 Wrapper.CategoriesTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -21,7 +21,7 @@ Wrapper.CategoriesTitle = styled.div`
 Wrapper.Category = styled.div``;
 Wrapper.CategoryItem = styled.div`
   display: flex;
-  grid-gap: 100px;
+  grid-gap: 120px;
   margin-bottom: 25px;
   padding: 8px;
   cursor: pointer;
@@ -58,7 +58,7 @@ Wrapper.CategoryItemCount = styled.div`
 `;
 Wrapper.Range = styled.div``;
 Wrapper.RangeTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -72,7 +72,7 @@ Wrapper.Prices = styled.div`
   padding-left: 25px;
 `;
 Wrapper.Price = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -104,7 +104,7 @@ Wrapper.Slider = styled(Slider)`
 Wrapper.FilterBtn = styled.button`
   width: 90px;
   height: 35px;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -117,7 +117,7 @@ Wrapper.FilterBtn = styled.button`
   margin-left: 25px;
 `;
 Wrapper.Size = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -130,7 +130,7 @@ Wrapper.Size = styled.div`
 Wrapper.SizeItem = styled.div`
   transition: all 0.3s ease 0s;
   display: flex;
-  grid-gap: 170px;
+  grid-gap: 185px;
   padding-left: 15px;
   height: 35px;
   margin-bottom: 7px;

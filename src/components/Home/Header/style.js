@@ -16,14 +16,14 @@ Wrapper.Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-gap: 170px;
+  grid-gap: 300px;
 `;
 Wrapper.HeaderText = styled.div`
   width: 600px;
   padding-left: 40px;
 `;
 Wrapper.HeaderTextSmall = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -33,7 +33,7 @@ Wrapper.HeaderTextSmall = styled.div`
   color: #3d3d3d;
 `;
 Wrapper.HeaderTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 65px;
@@ -46,7 +46,7 @@ Wrapper.SeparateWord = styled.div`
   display: inline;
 `;
 Wrapper.HeaderDescription = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -58,7 +58,7 @@ Wrapper.HeaderButton = styled.button`
   height: 40px;
   background: #46a358;
   border-radius: 6px;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

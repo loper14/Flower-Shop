@@ -5,14 +5,13 @@ export let Wrapper = styled.div`
 `;
 Wrapper.Container = styled.div`
   display: flex;
-  grid-gap: 40px;
+  grid-gap: 60px;
   justify-content: center;
-  width: 1100px;
   padding-left: 30px;
 `;
 Wrapper.Title = styled.div`
   text-align: center;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -36,9 +35,10 @@ Wrapper.Bottom = styled.div`
 `;
 Wrapper.BottomContainer = styled.div`
   display: flex;
+  grid-gap: 30px;
 `;
 Wrapper.BottomItem = styled.div`
-  width: 250px;
+  width: 300px;
   background: #fbfbfb;
   padding-left: 25px;
   padding-right: 5px;
@@ -50,7 +50,7 @@ Wrapper.BottomItemImg = styled.img`
   height: 130px;
 `;
 Wrapper.BottomItemTitle = styled.div`
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
@@ -71,7 +71,7 @@ Wrapper.BottomForm = styled.div`
 `;
 Wrapper.FormTitle = styled.div`
   margin-bottom: 15px;
-  font-family: "Cera Pro";
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
