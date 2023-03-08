@@ -38,16 +38,39 @@ Wrapper.NavbarText = styled.div`
   font-size: 18px;
   line-height: 20px;
   color: #3d3d3d;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
   cursor: pointer;
+  border-bottom: ${({ active }) => (active ? "3px solid #46a358" : "")};
 `;
 Wrapper.Actions = styled.div`
   display: flex;
   align-items: center;
-  grid-gap: 25px;
+  grid-gap: 10px;
 `;
-Wrapper.ActionsImg1 = styled.img``;
-Wrapper.ActionsImg2 = styled.img``;
+Wrapper.ActionsImg1 = styled.img`
+  cursor: pointer;
+`;
+Wrapper.Count = styled.div`
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background: #46a358;
+  border: 2px solid #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  line-height: 13px;
+  color: #ffffff;
+  border-radius: 50%;
+  padding-top: 2px;
+  left: 50px;
+  bottom: 6px;
+`;
+Wrapper.ActionsImg2 = styled.img`
+  margin-right: 40px;
+  cursor: pointer;
+`;
 Wrapper.ActionsImg3 = styled.img``;
 Wrapper.ActionsButton = styled.div`
   display: flex;
@@ -57,6 +80,7 @@ Wrapper.ActionsButton = styled.div`
   background: #46a358;
   border-radius: 6px;
   justify-content: center;
+  cursor: pointer;
   grid-gap: 10px;
   color: white;
   cursor: pointer;

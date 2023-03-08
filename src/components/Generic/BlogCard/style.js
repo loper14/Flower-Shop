@@ -26,6 +26,7 @@ Wrapper.CardTitle = styled.div`
   font-size: 20px;
   line-height: 26px;
   color: #3d3d3d;
+  width: 250px;
 `;
 Wrapper.CardDescription = styled.div`
   font-style: normal;

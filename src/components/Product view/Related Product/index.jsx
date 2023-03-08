@@ -1,56 +1,62 @@
 import React from "react";
-import BlogCard from "../../Generic/BlogCard";
+import RelatedPrCard from "../../Generic/RelatedPr";
 import { Wrapper } from "./style";
-import postImg1 from "../../../assets/imgs/post-img1.png";
-import postImg2 from "../../../assets/imgs/post-img2.png";
-import postImg3 from "../../../assets/imgs/post-img3.png";
-import postImg4 from "../../../assets/imgs/post-img4.png";
 import blog1 from "../../../assets/imgs/blog1.jpg";
 import blog2 from "../../../assets/imgs/blog2.jpg";
 import blog3 from "../../../assets/imgs/blog3.jpg";
 import { Button, Input } from "antd";
 
-const Blog = ({ show }) => {
+const Related = () => {
   return (
-    <Wrapper id="desc">
-      {!show ? (
-        <>
-          {" "}
-          <Wrapper.Title>Our Blog Posts</Wrapper.Title>
-          <Wrapper.Text>
-            We are an online plant shop offering a wide range of cheap and
-            trendy plants.
-          </Wrapper.Text>
-          <Wrapper.Container>
-            <BlogCard
-              img={postImg1}
-              postTime="September 12  I Read in 6 minutes"
-              title="Cactus & Succulent Care Tips"
-              description="Cacti are succulents are easy care plants for any home or patio. "
-            />
-            <BlogCard
-              img={postImg2}
-              postTime="September 13  I Read in 2 minutes"
-              title="Top 10 Succulents forYour Home"
-              description="Best in hanging baskets. Prefers medium to high light."
-            />
-            <BlogCard
-              img={postImg3}
-              postTime="September 15  I Read in 3 minutes"
-              title="Cacti & Succulent Care Tips"
-              description="Cacti and succulents thrive in containers and because most are.."
-            />
-            <BlogCard
-              img={postImg4}
-              postTime="September 15  I Read in 2 minutes"
-              title="Best Houseplants Room by Room"
-              description="The benefits of houseplants are endless. In addition to.."
-            />
-          </Wrapper.Container>
-        </>
-      ) : (
-        ""
-      )}
+    <Wrapper>
+      <Wrapper.Head>
+        <Wrapper.Title>You may be interested in</Wrapper.Title>
+      </Wrapper.Head>
+      <div style={{ marginBottom: "50px" }}>
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <ol
+            className="carousel-indicators"
+            style={{
+              display: "flex",
+              gridGap: "4px",
+              justifyContent: "center",
+              position: "relative",
+              top: "350px",
+            }}
+          >
+            <li
+              style={{ backgroundColor: "green", border: "none" }}
+              data-target="#myCarousel"
+              data-slide-to="0"
+              className="active"
+            ></li>
+            <li
+              style={{ backgroundColor: "green", border: "none" }}
+              data-target="#myCarousel"
+              data-slide-to="1"
+            ></li>
+            <li
+              style={{ backgroundColor: "green", border: "none" }}
+              data-target="#myCarousel"
+              data-slide-to="2"
+            ></li>
+          </ol>
+
+          <div className="carousel-inner">
+            <div className="item active">
+              <RelatedPrCard />
+            </div>
+
+            <div className="item">
+              <RelatedPrCard />
+            </div>
+
+            <div className="item">
+              <RelatedPrCard />
+            </div>
+          </div>
+        </div>
+      </div>
       <Wrapper.Bottom>
         <Wrapper.BottomContainer>
           <Wrapper.BottomItem>
@@ -113,4 +119,4 @@ const Blog = ({ show }) => {
   );
 };
 
-export default Blog;
+export default Related;

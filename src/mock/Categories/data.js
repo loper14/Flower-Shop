@@ -18,6 +18,7 @@ import flower17 from "../../assets/imgs/flower17.png";
 import flower18 from "../../assets/imgs/flower18.jpg";
 import flower19 from "../../assets/imgs/flower19.png";
 import flower20 from "../../assets/imgs/flower20.png";
+
 export const data = {
   "House Plants": [
     {
@@ -44,7 +45,7 @@ export const data = {
       price: 129.0,
       discount: false,
       img: flower3,
-      date: new Date("2021-04-01"),
+      date: new Date("2023-04-01"),
       sale: 20,
     },
     {
@@ -62,7 +63,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower5,
-      date: new Date("2021-07-01"),
+      date: new Date("2023-07-01"),
       sale: 78,
     },
     {
@@ -71,7 +72,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower6,
-      date: new Date("2026-11-09"),
+      date: new Date("2023-11-09"),
       sale: 41,
     },
     {
@@ -89,7 +90,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower8,
-      date: new Date("2021-06-06"),
+      date: new Date("2023-06-06"),
       sale: 23,
     },
     {
@@ -134,7 +135,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("2090-03-18"),
+      date: new Date("2023-03-18"),
       sale: 2,
     },
     {
@@ -143,7 +144,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower14,
-      date: new Date("1800-03-19"),
+      date: new Date("2020-03-19"),
       sale: 192,
     },
     {
@@ -152,7 +153,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("1900-08-19"),
+      date: new Date("2018-08-19"),
       sale: 152,
     },
     {
@@ -161,16 +162,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower16,
-      date: new Date("1902-08-19"),
+      date: new Date("2020-08-19"),
       sale: 512,
     },
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
-      date: new Date("1907-08-19"),
+      date: new Date("2019-08-19"),
       sale: 1232,
     },
     {
@@ -179,7 +180,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower18,
-      date: new Date("1920-08-19"),
+      date: new Date("2023-08-19"),
       sale: 1132,
     },
     {
@@ -188,7 +189,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower19,
-      date: new Date("1930-08-19"),
+      date: new Date("2020-08-19"),
       sale: 232,
     },
     {
@@ -197,7 +198,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("1931-08-19"),
+      date: new Date("2019-08-19"),
       sale: 252,
     },
   ],
@@ -217,7 +218,7 @@ export const data = {
       price: 149.0,
       discount: false,
       img: flower19,
-      date: new Date("2032-03-01"),
+      date: new Date("2020-03-01"),
       sale: 120,
     },
     {
@@ -235,7 +236,7 @@ export const data = {
       price: 109.0,
       discount: false,
       img: flower17,
-      date: new Date("2032-03-01"),
+      date: new Date("2022-03-01"),
       sale: 120,
     },
     {
@@ -244,7 +245,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower5,
-      date: new Date("2002-03-01"),
+      date: new Date("2017-03-01"),
       sale: 13,
     },
     {
@@ -253,7 +254,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower6,
-      date: new Date("2012-03-01"),
+      date: new Date("2020-03-01"),
       sale: 1,
     },
     {
@@ -271,7 +272,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower8,
-      date: new Date("2032-11-19"),
+      date: new Date("2023-11-19"),
       sale: 201,
     },
     {
@@ -280,7 +281,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower9,
-      date: new Date("2042-12-20"),
+      date: new Date("2022-12-20"),
       sale: 211,
     },
     {
@@ -289,7 +290,7 @@ export const data = {
       price: 89.0,
       discount: false,
       img: flower10,
-      date: new Date("2042-12-20"),
+      date: new Date("2023-12-20"),
       sale: 211,
     },
     {
@@ -307,7 +308,7 @@ export const data = {
       price: 1.0,
       discount: false,
       img: flower12,
-      date: new Date("2012-12-25"),
+      date: new Date("2020-12-25"),
       sale: 21,
     },
     {
@@ -316,7 +317,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("2092-12-25"),
+      date: new Date("2019-12-25"),
       sale: 31,
     },
     {
@@ -325,7 +326,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower14,
-      date: new Date("2002-12-20"),
+      date: new Date("2018-12-20"),
       sale: 51,
     },
     {
@@ -334,7 +335,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("2102-12-20"),
+      date: new Date("2018-12-20"),
       sale: 1001,
     },
     {
@@ -343,16 +344,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower16,
-      date: new Date("2122-12-20"),
+      date: new Date("2017-12-20"),
       sale: 101,
     },
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
-      date: new Date("2202-02-10"),
+      date: new Date("2020-02-10"),
       sale: 1051,
     },
     {
@@ -361,7 +362,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower18,
-      date: new Date("1202-02-10"),
+      date: new Date("2023-02-10"),
       sale: 1051,
     },
     {
@@ -370,7 +371,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower19,
-      date: new Date("1222-02-10"),
+      date: new Date("2022-02-10"),
       sale: 1251,
     },
     {
@@ -379,7 +380,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("1302-02-10"),
+      date: new Date("2019-02-10"),
       sale: 1951,
     },
     {
@@ -388,7 +389,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower1,
-      date: new Date("1502-02-10"),
+      date: new Date("2020-02-10"),
       sale: 1951,
     },
   ],
@@ -399,7 +400,7 @@ export const data = {
       price: 119.0,
       discount: false,
       img: flower1,
-      date: new Date("1702-02-10"),
+      date: new Date("2023-02-10"),
       sale: 2951,
     },
     {
@@ -408,7 +409,7 @@ export const data = {
       price: 149.0,
       discount: false,
       img: flower2,
-      date: new Date("1202-02-10"),
+      date: new Date("2023-02-10"),
       sale: 2951,
     },
     {
@@ -417,7 +418,7 @@ export const data = {
       price: 129.0,
       discount: false,
       img: flower3,
-      date: new Date("1722-02-10"),
+      date: new Date("2023-02-10"),
       sale: 2951,
     },
     {
@@ -426,7 +427,7 @@ export const data = {
       price: 109.0,
       discount: false,
       img: flower4,
-      date: new Date("1702-02-10"),
+      date: new Date("2023-02-10"),
       sale: 29,
     },
     {
@@ -435,7 +436,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower5,
-      date: new Date("1702-12-10"),
+      date: new Date("2023-12-10"),
       sale: 2951,
     },
     {
@@ -444,7 +445,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower6,
-      date: new Date("1702-02-19"),
+      date: new Date("2023-02-19"),
       sale: 2951,
     },
     {
@@ -453,7 +454,7 @@ export const data = {
       price: 329.0,
       discount: false,
       img: flower7,
-      date: new Date("1702-02-19"),
+      date: new Date("2020-02-19"),
       sale: 2951,
     },
     {
@@ -462,7 +463,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower8,
-      date: new Date("1902-02-19"),
+      date: new Date("2023-02-19"),
       sale: 2951,
     },
     {
@@ -471,7 +472,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower9,
-      date: new Date("1502-12-11"),
+      date: new Date("2019-12-11"),
       sale: 2951,
     },
     {
@@ -480,7 +481,7 @@ export const data = {
       price: 89.0,
       discount: false,
       img: flower10,
-      date: new Date("1502-12-13"),
+      date: new Date("2018-12-13"),
       sale: 2951,
     },
     {
@@ -489,7 +490,7 @@ export const data = {
       price: 10.0,
       discount: false,
       img: flower11,
-      date: new Date("1502-12-29"),
+      date: new Date("2020-12-29"),
       sale: 2951,
     },
     {
@@ -498,7 +499,7 @@ export const data = {
       price: 1.0,
       discount: false,
       img: flower12,
-      date: new Date("1502-12-10"),
+      date: new Date("2019-12-10"),
       sale: 2951,
     },
     {
@@ -507,7 +508,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("1702-02-13"),
+      date: new Date("2023-02-13"),
       sale: 2951,
     },
     {
@@ -516,7 +517,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower14,
-      date: new Date("1702-02-16"),
+      date: new Date("2023-02-16"),
       sale: 295,
     },
     {
@@ -525,7 +526,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("1702-02-17"),
+      date: new Date("2023-02-17"),
       sale: 251,
     },
     {
@@ -534,16 +535,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower16,
-      date: new Date("1702-02-12"),
+      date: new Date("2023-02-12"),
       sale: 251,
     },
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
-      date: new Date("1702-02-10"),
+      date: new Date("2023-02-10"),
       sale: 2951,
     },
     {
@@ -552,7 +553,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower18,
-      date: new Date("1922-02-12"),
+      date: new Date("2023-02-12"),
       sale: 201,
     },
     {
@@ -561,7 +562,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower19,
-      date: new Date("1922-12-23"),
+      date: new Date("2023-12-23"),
       sale: 1231,
     },
     {
@@ -570,7 +571,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("1942-12-10"),
+      date: new Date("2023-12-10"),
       sale: 3051,
     },
     {
@@ -579,7 +580,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower1,
-      date: new Date("1922-12-19"),
+      date: new Date("2023-12-19"),
       sale: 7951,
     },
   ],
@@ -590,7 +591,7 @@ export const data = {
       price: 119.0,
       discount: false,
       img: flower1,
-      date: new Date("1922-12-10"),
+      date: new Date("2023-12-10"),
       sale: 2951,
     },
     {
@@ -608,7 +609,7 @@ export const data = {
       price: 129.0,
       discount: false,
       img: flower3,
-      date: new Date("2021-04-23"),
+      date: new Date("2023-04-23"),
       sale: 71251,
     },
     {
@@ -617,7 +618,7 @@ export const data = {
       price: 109.0,
       discount: false,
       img: flower4,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 131,
     },
     {
@@ -626,7 +627,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower5,
-      date: new Date("2021-02-19"),
+      date: new Date("2023-02-19"),
       sale: 211,
     },
     {
@@ -635,7 +636,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower6,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -644,7 +645,7 @@ export const data = {
       price: 329.0,
       discount: false,
       img: flower7,
-      date: new Date("2001-02-29"),
+      date: new Date("2023-02-29"),
       sale: 211,
     },
     {
@@ -653,7 +654,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower8,
-      date: new Date("2001-04-19"),
+      date: new Date("2023-04-19"),
       sale: 231,
     },
     {
@@ -662,7 +663,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("2001-06-21"),
+      date: new Date("2023-06-21"),
       sale: 251,
     },
     {
@@ -671,7 +672,7 @@ export const data = {
       price: 89.0,
       discount: false,
       img: flower3,
-      date: new Date("2001-08-17"),
+      date: new Date("2023-08-17"),
       sale: 2121,
     },
     {
@@ -680,7 +681,7 @@ export const data = {
       price: 10.0,
       discount: false,
       img: flower4,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -689,7 +690,7 @@ export const data = {
       price: 1.0,
       discount: false,
       img: flower8,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -698,7 +699,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -707,7 +708,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower2,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -716,7 +717,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -725,16 +726,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower1,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
       id: 17,
       name: "Lantana",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower20,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -743,7 +744,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower11,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -752,7 +753,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -761,7 +762,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower5,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -770,7 +771,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower1,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
   ],
@@ -781,7 +782,7 @@ export const data = {
       price: 119.0,
       discount: false,
       img: flower20,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -790,7 +791,7 @@ export const data = {
       price: 149.0,
       discount: false,
       img: flower19,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -799,7 +800,7 @@ export const data = {
       price: 129.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -808,7 +809,7 @@ export const data = {
       price: 109.0,
       discount: false,
       img: flower10,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -817,7 +818,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower9,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -826,7 +827,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower5,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -835,7 +836,7 @@ export const data = {
       price: 329.0,
       discount: false,
       img: flower7,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -844,7 +845,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower10,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -853,7 +854,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower16,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -862,7 +863,7 @@ export const data = {
       price: 89.0,
       discount: false,
       img: flower14,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -871,7 +872,7 @@ export const data = {
       price: 10.0,
       discount: false,
       img: flower11,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -880,7 +881,7 @@ export const data = {
       price: 1.0,
       discount: false,
       img: flower12,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -889,7 +890,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -898,7 +899,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower14,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -907,7 +908,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -916,16 +917,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower16,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1113,7 +1114,7 @@ export const data = {
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower2,
       date: new Date("2021-12-19"),
@@ -1304,7 +1305,7 @@ export const data = {
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower20,
       date: new Date("2021-12-19"),
@@ -1495,7 +1496,7 @@ export const data = {
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
       date: new Date("2021-12-19"),
@@ -1507,7 +1508,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower18,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1516,7 +1517,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower19,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1525,7 +1526,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1534,7 +1535,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower1,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
   ],
@@ -1545,7 +1546,7 @@ export const data = {
       price: 119.0,
       discount: false,
       img: flower10,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1554,7 +1555,7 @@ export const data = {
       price: 149.0,
       discount: false,
       img: flower20,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1563,7 +1564,7 @@ export const data = {
       price: 129.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1572,7 +1573,7 @@ export const data = {
       price: 109.0,
       discount: false,
       img: flower7,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1581,7 +1582,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower12,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1590,7 +1591,7 @@ export const data = {
       price: 219.0,
       discount: false,
       img: flower15,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1599,7 +1600,7 @@ export const data = {
       price: 329.0,
       discount: false,
       img: flower11,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1608,7 +1609,7 @@ export const data = {
       price: 530.0,
       discount: false,
       img: flower12,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1617,7 +1618,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower9,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1626,7 +1627,7 @@ export const data = {
       price: 89.0,
       discount: false,
       img: flower10,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1635,7 +1636,7 @@ export const data = {
       price: 10.0,
       discount: false,
       img: flower11,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1644,7 +1645,7 @@ export const data = {
       price: 1.0,
       discount: false,
       img: flower12,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1653,7 +1654,7 @@ export const data = {
       price: 9.0,
       discount: false,
       img: flower13,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1662,7 +1663,7 @@ export const data = {
       price: 11.0,
       discount: false,
       img: flower14,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1671,7 +1672,7 @@ export const data = {
       price: 13.0,
       discount: false,
       img: flower15,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1680,16 +1681,16 @@ export const data = {
       price: 103.0,
       discount: false,
       img: flower16,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
       id: 17,
       name: "Barberton Daisy",
-      price: 4043.0,
+      price: 950.0,
       discount: false,
       img: flower17,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1698,7 +1699,7 @@ export const data = {
       price: 12.0,
       discount: false,
       img: flower18,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1707,7 +1708,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower19,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1716,7 +1717,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower20,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
     {
@@ -1725,7 +1726,7 @@ export const data = {
       price: 19.0,
       discount: false,
       img: flower1,
-      date: new Date("2021-12-19"),
+      date: new Date("2023-12-19"),
       sale: 211,
     },
   ],

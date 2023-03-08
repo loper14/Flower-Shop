@@ -81,9 +81,10 @@ Wrapper.Sale = styled.div`
 Wrapper.ProductName = styled.div`
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 16px;
   color: rgb(61, 61, 61);
+  white-space: nowrap;
 `;
 Wrapper.Space = styled.div`
   display: flex;

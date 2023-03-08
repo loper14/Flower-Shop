@@ -5,4 +5,8 @@ export default configureStore({
   reducer: {
     data: Slices,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });

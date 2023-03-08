@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Wrapper } from "./style";
 import { data, sizes } from "../../../../mock/Categories";
 import saleImg from "../../../../assets/imgs/sale.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCategory, setMinMax } from "../../../../redux/slice";
 
 const Actions = () => {
   const [min, setMin] = useState(0);
-  const [max, setMax] = useState(4050);
+  const [max, setMax] = useState(1000);
   let [active, setActive] = useState(data[0].name);
   let [active2, setActive2] = useState(sizes[0].name);
+  let { value } = useSelector((state) => state.data);
   let dispatch = useDispatch();
   const changedValue = (e) => {
     setMin(e[0]);
@@ -47,7 +48,7 @@ const Actions = () => {
         <Wrapper.RangeTitle>Price Range</Wrapper.RangeTitle>
         <Wrapper.Slider
           onChange={changedValue}
-          max={4050}
+          max={1000}
           range
           color="#46A358"
           defaultValue={[0, 4050]}
@@ -56,14 +57,10 @@ const Actions = () => {
         <Wrapper.Prices>
           <Wrapper.PriceTitle>Price:</Wrapper.PriceTitle>
           <Wrapper.Price>
-            ${min} - ${max}
+            ${min} - ${max} {value}
           </Wrapper.Price>
         </Wrapper.Prices>
-        <Wrapper.FilterBtn
-          onClick={() => {
-            dispatch(setMinMax({ min, max }));
-          }}
-        >
+        <Wrapper.FilterBtn onClick={() => dispatch(setMinMax({ min, max }))}>
           Filter
         </Wrapper.FilterBtn>
       </Wrapper.Range>

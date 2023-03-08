@@ -6,14 +6,15 @@ import "../style.css";
 import { data } from "../../../../mock/Categories/data";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  setMapData,
   sortDataBySale,
   sortDataByNews,
   sortDataByAll,
   mostExpensive,
   theCheapest,
   defaultSorting,
+  setProductData,
 } from "../../../../redux/slice";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   let { mapData } = useSelector((state) => state.data);
@@ -76,6 +77,7 @@ const Products = () => {
   ];
 
   let [active, setActive] = useState("all");
+  let navigate = useNavigate();
   return (
     <Wrapper>
       <Wrapper.ProductSections>
@@ -136,7 +138,12 @@ const Products = () => {
                 <Wrapper.CardHoverItems className="hoverItem">
                   <Wrapper.HoverItem1 />
                   <Wrapper.HoverItem2 />
-                  <Wrapper.HoverItem3 />
+                  <Wrapper.HoverItem3
+                    onClick={() => {
+                      dispatch(setProductData(value));
+                      navigate("/product_view");
+                    }}
+                  />
                 </Wrapper.CardHoverItems>
                 <Wrapper.Space>
                   <Wrapper.ProductName>{value.name}</Wrapper.ProductName>
