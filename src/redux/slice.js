@@ -19,12 +19,11 @@ export let Slices = createSlice({
       state.category = action.payload;
     },
 
-    setMinMax(state, action) {
-      state.minMax = action.payload;
+    setMinMax(state, {payload}) {
       let filteredData = data;
       filteredData = filteredData[state.category].filter(
         (value) =>
-          value.price >= state.minMax.min && value.price <= state.minMax.max
+          value.price >= payload.min && value.price <= payload.max
       );
       state.mapData = filteredData;
     },
