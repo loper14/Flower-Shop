@@ -1,4 +1,3 @@
-import React from "react";
 import { CardContainer } from "./style";
 import { relatedPrData } from "../../../mock/relatedPr";
 

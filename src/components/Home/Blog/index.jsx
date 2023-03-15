@@ -1,4 +1,3 @@
-import React from "react";
 import BlogCard from "../../Generic/BlogCard";
 import { Wrapper } from "./style";
 import postImg1 from "../../../assets/imgs/post-img1.png";

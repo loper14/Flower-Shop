@@ -1,4 +1,3 @@
-import React from "react";
 import { Wrapper } from "./style";
 import { ArrowRightOutlined } from "@ant-design/icons";
 

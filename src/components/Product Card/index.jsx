@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Footer from "../Home/Footer";
 import Related from "../Product view/Related Product";
@@ -24,13 +23,15 @@ const ProductCard = () => {
           <Wrapper.Table>
             <Wrapper.TableHead>
               <Wrapper.TableHeadTitle>Products</Wrapper.TableHeadTitle>
-              <Wrapper.TableHeadTitle>Price</Wrapper.TableHeadTitle>
+              <Wrapper.TableHeadTitle style={{ marginLeft: "80px" }}>
+                Price
+              </Wrapper.TableHeadTitle>
               <Wrapper.TableHeadTitle>Quantity</Wrapper.TableHeadTitle>
               <Wrapper.TableHeadTitle>Total</Wrapper.TableHeadTitle>
             </Wrapper.TableHead>
             <Wrapper.TableBottom>
               {cardData.map((value) => (
-                <Wrapper.TableBottomItem>
+                <Wrapper.TableBottomItem key={value.id}>
                   <Wrapper.ItemName>
                     <Wrapper.ItemImg src={value.img} />
                     <Wrapper.ItemNames>
@@ -41,21 +42,21 @@ const ProductCard = () => {
                   <Wrapper.ItemPrice>${value.price}</Wrapper.ItemPrice>
                   <Wrapper.ItemQuantity>
                     <Wrapper.IncreaseBtn
-                      onClick={() => dispatch(increaseQuantity())}
+                      onClick={() => dispatch(increaseQuantity(value.id))}
                     >
                       +
                     </Wrapper.IncreaseBtn>
                     <Wrapper.ItemQuantityNum>
-                      {quantity}
+                      {value.quantity}
                     </Wrapper.ItemQuantityNum>
                     <Wrapper.DecreaseBtn
-                      onClick={() => dispatch(decreaseQuantity())}
+                      onClick={() => dispatch(decreaseQuantity(value.id))}
                     >
                       -
                     </Wrapper.DecreaseBtn>
                   </Wrapper.ItemQuantity>
                   <Wrapper.ItemTotal>
-                    ${value.price * quantity}
+                    ${value.price * value.quantity}
                   </Wrapper.ItemTotal>
                   <Wrapper.DeleteImg
                     onClick={() => dispatch(deleteCardData(value))}
@@ -92,7 +93,12 @@ const ProductCard = () => {
             </Input.Group>
             <Wrapper.TextFlexer>
               <Wrapper.Div>Subtotal</Wrapper.Div>
-              <Wrapper.Sum>$2,683.00</Wrapper.Sum>
+              <Wrapper.Sum>
+                $
+                {cardData
+                  ?.map((value) => value.price * value.quantity)
+                  ?.reduce((sum, value) => (sum += value))}
+              </Wrapper.Sum>
             </Wrapper.TextFlexer>
             <Wrapper.TextFlexer>
               <Wrapper.Div>Coupon Discount</Wrapper.Div>
@@ -105,7 +111,12 @@ const ProductCard = () => {
             <Wrapper.ChargeText>View shipping charge</Wrapper.ChargeText>
             <Wrapper.TextFlexer>
               <Wrapper.Sum>Total</Wrapper.Sum>
-              <Wrapper.SumTotal>$2,699.00</Wrapper.SumTotal>
+              <Wrapper.SumTotal>
+                $
+                {cardData
+                  ?.map((value) => value.price * value.quantity)
+                  ?.reduce((sum, value) => sum + value) + 16}
+              </Wrapper.SumTotal>
             </Wrapper.TextFlexer>
             <Wrapper.CheckoutBtn onClick={() => navigate("/shop/checkout")}>
               Proceed To Checkout

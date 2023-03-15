@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import Footer from "../Home/Footer";
 import Description from "./Description";

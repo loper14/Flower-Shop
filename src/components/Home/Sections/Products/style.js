@@ -133,7 +133,7 @@ Wrapper.HoverItem1 = styled(ShoppingCartOutlined)`
 Wrapper.HoverItem2 = styled(HeartOutlined)`
   width: 35px;
   height: 35px;
-  background: #ffffff;
+  background: ${({ wish }) => (wish ? "red" : "#ffffff")};
   border-radius: 4px;
   box-shadow: 1px 1px 5px black;
   padding-top: 10px;

@@ -5,17 +5,19 @@ import img1 from "../../../assets/icons/search.svg";
 import img2 from "../../../assets/icons/shop.svg";
 import img3 from "../../../assets/icons/Logout.svg";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { showModal } from "../../../redux/modalSlices";
 const Navbar = () => {
   let navigate = useNavigate();
   let { cardData } = useSelector((state) => state.data);
+  let { signed } = useSelector((state) => state.modalka);
+  let dispatch = useDispatch();
   let [active, setActive] = useState("home");
   return (
     <Wrapper>
       <Wrapper.Container>
         <Wrapper.Nav>
-          <Wrapper.Logo>
+          <Wrapper.Logo onClick={() => navigate("/")}>
             <Wrapper.LogoImg src={logoImg} />
             <Wrapper.LogoText>GREENSHOP</Wrapper.LogoText>
           </Wrapper.Logo>
@@ -84,13 +86,27 @@ const Navbar = () => {
           </Wrapper.Navbar>
           <Wrapper.Actions>
             <Wrapper.ActionsImg1 src={img1} />
-            <Wrapper.Count>{cardData.length}</Wrapper.Count>
+            {cardData.length > 0 ? (
+              <Wrapper.Count>{cardData.length}</Wrapper.Count>
+            ) : (
+              ""
+            )}
             <Wrapper.ActionsImg2
               onClick={() => navigate("/shop/card")}
               src={img2}
             />
-            <Wrapper.ActionsButton type="primary">
-              <Wrapper.ActionsImg3 src={img3} /> Login
+            <Wrapper.ActionsButton
+              onClick={() => {
+                if (!signed) {
+                  dispatch(showModal());
+                } else {
+                  navigate("/profile");
+                }
+              }}
+              type="primary"
+            >
+              <Wrapper.ActionsImg3 src={img3} />{" "}
+              {signed ? localStorage.getItem("username") : "Login"}
             </Wrapper.ActionsButton>
           </Wrapper.Actions>
         </Wrapper.Nav>

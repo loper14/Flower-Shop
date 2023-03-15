@@ -25,7 +25,6 @@ const ProductCheckout = () => {
   return (
     <Wrapper>
       <Modal
-        // title="Basic Modal"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}

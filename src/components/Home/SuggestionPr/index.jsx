@@ -1,4 +1,3 @@
-import React from "react";
 import { Wrapper } from "./style";
 import flower5 from "../../../assets/imgs/flower5.png";
 import flower3 from "../../../assets/imgs/flower3.png";

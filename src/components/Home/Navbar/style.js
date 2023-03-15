@@ -20,6 +20,7 @@ Wrapper.Logo = styled.div`
   display: flex;
   align-items: center;
   grid-gap: 10px;
+  cursor: pointer;
 `;
 Wrapper.LogoText = styled.div`
   color: #46a358;
@@ -49,6 +50,7 @@ Wrapper.Actions = styled.div`
 `;
 Wrapper.ActionsImg1 = styled.img`
   cursor: pointer;
+  margin-right: 20px;
 `;
 Wrapper.Count = styled.div`
   position: relative;

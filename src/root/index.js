@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Home/Navbar";
 import NotFound from "../components/404";
@@ -6,6 +5,7 @@ import Home from "../pages/Home";
 import ProductView from "../components/Product view";
 import ProductCard from "../components/Product Card";
 import ProductCheckout from "../components/Product checkout";
+import Profile from "../components/Profile";
 const Root = () => {
   return (
     <Routes>
@@ -16,6 +16,7 @@ const Root = () => {
         <Route path="/plant" element={<h1>Welcome To Plant care</h1>}></Route>
         <Route path="/blogs" element={<h1>Welcome To Blogs</h1>}></Route>
         <Route path="/shop/card" element={<ProductCard />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/shop/checkout" element={<ProductCheckout />}></Route>
       </Route>
       <Route path="*" element={<NotFound />}></Route>

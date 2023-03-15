@@ -44,7 +44,7 @@ Wrapper.ItemImg = styled.img`
 Wrapper.ItemName = styled.div`
   align-items: center;
   display: flex;
-  width: 250px;
+  width: 270px;
   grid-gap: 10px;
 `;
 Wrapper.ItemNames = styled.div`

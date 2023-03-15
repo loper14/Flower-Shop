@@ -1,4 +1,3 @@
-import React from "react";
 import { Wrapper } from "./style";
 import location from "../../../assets/icons/location.svg";
 import message from "../../../assets/icons/message.svg";

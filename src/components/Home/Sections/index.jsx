@@ -1,4 +1,3 @@
-import React from "react";
 import Actions from "./Actions";
 import { Wrapper } from "./style";
 import Products from "./Products";

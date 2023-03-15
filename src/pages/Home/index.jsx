@@ -1,4 +1,3 @@
-import React from "react";
 import Blog from "../../components/Home/Blog";
 import Footer from "../../components/Home/Footer";
 import Sections from "../../components/Home/Sections";

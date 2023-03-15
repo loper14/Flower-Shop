@@ -13,13 +13,15 @@ import {
   theCheapest,
   defaultSorting,
   setProductData,
+  addCardData,
 } from "../../../../redux/slice";
 import { useNavigate } from "react-router-dom";
+import { setWishlist } from "../../../../redux/wishlist";
 
 const Products = () => {
-  let { mapData } = useSelector((state) => state.data);
-  let { category, minMax } = useSelector((state) => state.data);
+  let { mapData, category, count } = useSelector((state) => state.data);
   let [showCard, setShowCard] = useState([0, 8]);
+  let [wish, setWish] = useState({});
   let [page, setPage] = useState();
   let dispatch = useDispatch();
 
@@ -136,8 +138,18 @@ const Products = () => {
                 <Wrapper.Sale>{value.sale}</Wrapper.Sale>
                 <Wrapper.CardImg src={value.img} />
                 <Wrapper.CardHoverItems className="hoverItem">
-                  <Wrapper.HoverItem1 />
-                  <Wrapper.HoverItem2 />
+                  <Wrapper.HoverItem1
+                    onClick={() =>
+                      dispatch(addCardData({ ...value, quantity: count }))
+                    }
+                  />
+                  <Wrapper.HoverItem2
+                    wish={wish.isWish && value.id === wish.id ? true : false}
+                    onClick={() => {
+                      dispatch(setWishlist(value));
+                      setWish({ ...wish, isWish: true, id: value.id });
+                    }}
+                  />
                   <Wrapper.HoverItem3
                     onClick={() => {
                       dispatch(setProductData(value));

@@ -1,4 +1,3 @@
-import React from "react";
 import RelatedPrCard from "../../Generic/RelatedPr";
 import { Wrapper } from "./style";
 import blog1 from "../../../assets/imgs/blog1.jpg";

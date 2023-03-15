@@ -1,4 +1,4 @@
-import { Rate, Button, message } from "antd";
+import { notification, Rate } from "antd";
 import React, { useState } from "react";
 import { Wrapper } from "./style";
 import facebook2 from "../../../assets/icons/facebook2.svg";
@@ -15,28 +15,28 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const Right = ({ data }) => {
-  const [messageApi, contextHolder] = message.useMessage();
   const [value, setValue] = useState(4);
   let navigate = useNavigate();
   let dispatch = useDispatch();
   let { activeSize, count, cardData } = useSelector((state) => state.data);
   const desc = ["terrible", "bad", "normal", "good", "wonderful"];
-  const success = () => {
-    messageApi.open({
-      type: "success",
-      content: "Product added to your card",
-      className: "custom-class",
-      style: {
-        marginTop: "400px",
-        marginLeft: "90vh",
-      },
+  const [api, contextHolder] = notification.useNotification();
+  const openNotificationWithIcon = (type) => {
+    api[type]({
+      placement: "topRight",
+      message: "Notification Title",
+      description:
+        "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
     });
   };
+
   return (
     <Wrapper>
       <Wrapper.Head>
         <Wrapper.HeadLeft>
-          <Wrapper.Title>{data.name}</Wrapper.Title>
+          <Wrapper.Title onClick={() => openNotificationWithIcon("success")}>
+            {data.name}
+          </Wrapper.Title>
           <Wrapper.Price>${data.price}</Wrapper.Price>
         </Wrapper.HeadLeft>
         <Wrapper.HeadRight>
@@ -95,11 +95,9 @@ const Right = ({ data }) => {
             {contextHolder}
             <Wrapper.AddBtn
               onClick={() => {
-                dispatch(addCardData({ ...data, quantity: 1 }));
-                success();
-                setTimeout(() => {
-                  // navigate("/");
-                }, 1000);
+                openNotificationWithIcon("success", "topLeft");
+                dispatch(addCardData({ ...data, quantity: count }));
+                navigate("/");
               }}
             >
               Add to card
