@@ -142,7 +142,13 @@ const Products = () => {
           (value, index) =>
             index >= showCard[0] &&
             index <= showCard[1] && (
-              <Wrapper.ProductCard key={value.id}>
+              <Wrapper.ProductCard
+                onClick={() => {
+                  dispatch(setProductData(value));
+                  navigate("/product_view");
+                }}
+                key={value.id}
+              >
                 <Wrapper.Sale>{value.sale}</Wrapper.Sale>
                 <Wrapper.CardImg src={value.img} />
                 <Wrapper.CardHoverItems className="hoverItem">

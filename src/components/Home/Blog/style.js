@@ -68,6 +68,11 @@ Wrapper.BottomItem = styled.div`
   background: #fbfbfb;
   padding-left: 25px;
   padding-right: 5px;
+  @media (max-width: 400px) {
+    width: 220px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
   border-right: ${({ isEnd }) =>
     !isEnd ? "1px solid rgba(70, 163, 88, 0.1)" : ""};
 `;
@@ -122,5 +127,11 @@ Wrapper.FormDesc = styled.div`
   margin-bottom: 20px;
   @media (max-width: 750px) {
     font-size: 11px;
+  }
+  @media (max-width: 400px) {
+    padding-top: 0px;
+    font-size: 10px;
+    width: 300px;
+    margin: 20px auto;
   }
 `;
