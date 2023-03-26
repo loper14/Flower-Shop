@@ -7,14 +7,94 @@ import img3 from "../../../assets/icons/Logout.svg";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { showModal } from "../../../redux/modalSlices";
+import { Drawer, Input } from "antd";
+import { setSearchedData } from "../../../redux/slice";
+import humburger from "../../../assets/icons/humburger.svg";
 const Navbar = () => {
   let navigate = useNavigate();
   let { cardData } = useSelector((state) => state.data);
-  let { signed } = useSelector((state) => state.modalka);
   let dispatch = useDispatch();
+  let signed = localStorage.getItem("signed");
   let [active, setActive] = useState("home");
+  let [isSearch, setIsSearch] = useState(false);
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   return (
     <Wrapper>
+      <Drawer title="Menu" placement="right" onClose={onClose} open={open}>
+        <Wrapper.HumburgerMenu flexD={true}>
+          <NavLink
+            style={{
+              textDecoration: "none",
+              color: "#3d3d3d",
+              paddingBottom: "3px",
+            }}
+            to="/"
+            onClick={onClose}
+          >
+            <Wrapper.NavbarText
+              onClick={() => setActive("home")}
+              active={active === "home" ? true : false}
+            >
+              Home
+            </Wrapper.NavbarText>
+          </NavLink>
+
+          <NavLink
+            style={{
+              textDecoration: "none",
+              color: "#3d3d3d",
+              paddingBottom: "3px",
+            }}
+            to="/shop"
+            onClick={onClose}
+          >
+            <Wrapper.NavbarText
+              onClick={() => setActive("shop")}
+              active={active === "shop" ? true : false}
+            >
+              Shop
+            </Wrapper.NavbarText>
+          </NavLink>
+          <NavLink
+            style={{
+              textDecoration: "none",
+              color: "#3d3d3d",
+              paddingBottom: "3px",
+            }}
+            to="/plant"
+            onClick={onClose}
+          >
+            <Wrapper.NavbarText
+              onClick={() => setActive("plant")}
+              active={active === "plant" ? true : false}
+            >
+              Plant Care
+            </Wrapper.NavbarText>
+          </NavLink>
+          <NavLink
+            style={{
+              textDecoration: "none",
+              color: "#3d3d3d",
+              paddingBottom: "3px",
+            }}
+            to="/blogs"
+            onClick={onClose}
+          >
+            <Wrapper.NavbarText
+              onClick={() => setActive("blogs")}
+              active={active === "blogs" ? true : false}
+            >
+              Blogs
+            </Wrapper.NavbarText>
+          </NavLink>
+        </Wrapper.HumburgerMenu>
+      </Drawer>
       <Wrapper.Container>
         <Wrapper.Nav>
           <Wrapper.Logo onClick={() => navigate("/")}>
@@ -85,7 +165,21 @@ const Navbar = () => {
             </NavLink>
           </Wrapper.Navbar>
           <Wrapper.Actions>
-            <Wrapper.ActionsImg1 src={img1} />
+            {isSearch ? (
+              <Input
+                onKeyDown={(e) => e.key === "Enter" && navigate("search")}
+                placeholder="search..."
+                style={{ width: "150px" }}
+                onChange={(e) =>
+                  dispatch(setSearchedData(e.target.value.toLowerCase()))
+                }
+              />
+            ) : (
+              <Wrapper.ActionsImg1
+                onClick={() => setIsSearch(true)}
+                src={img1}
+              />
+            )}
             {cardData.length > 0 ? (
               <Wrapper.Count>{cardData.length}</Wrapper.Count>
             ) : (
@@ -108,6 +202,7 @@ const Navbar = () => {
               <Wrapper.ActionsImg3 src={img3} />{" "}
               {signed ? localStorage.getItem("username") : "Login"}
             </Wrapper.ActionsButton>
+            <Wrapper.Humburger onClick={showDrawer} src={humburger} />
           </Wrapper.Actions>
         </Wrapper.Nav>
       </Wrapper.Container>

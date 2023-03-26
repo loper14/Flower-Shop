@@ -6,6 +6,7 @@ import {
   increaseQuantity,
   decreaseQuantity,
   deleteCardData,
+  setTotal,
 } from "../../redux/slice";
 import { Button, Input } from "antd";
 import deleteImg from "../../assets/icons/delete.svg";
@@ -30,7 +31,7 @@ const ProductCard = () => {
               <Wrapper.TableHeadTitle>Total</Wrapper.TableHeadTitle>
             </Wrapper.TableHead>
             <Wrapper.TableBottom>
-              {cardData.map((value) => (
+              {cardData?.map((value) => (
                 <Wrapper.TableBottomItem key={value.id}>
                   <Wrapper.ItemName>
                     <Wrapper.ItemImg src={value.img} />
@@ -95,9 +96,10 @@ const ProductCard = () => {
               <Wrapper.Div>Subtotal</Wrapper.Div>
               <Wrapper.Sum>
                 $
-                {cardData
-                  ?.map((value) => value.price * value.quantity)
-                  ?.reduce((sum, value) => (sum += value))}
+                {cardData.length > 0 &&
+                  cardData
+                    ?.map((value) => value.price * value.quantity)
+                    ?.reduce((sum, value) => (sum += value))}
               </Wrapper.Sum>
             </Wrapper.TextFlexer>
             <Wrapper.TextFlexer>
@@ -113,12 +115,25 @@ const ProductCard = () => {
               <Wrapper.Sum>Total</Wrapper.Sum>
               <Wrapper.SumTotal>
                 $
-                {cardData
-                  ?.map((value) => value.price * value.quantity)
-                  ?.reduce((sum, value) => sum + value) + 16}
+                {cardData.length > 0 &&
+                  cardData
+                    ?.map((value) => value.price * value.quantity)
+                    ?.reduce((sum, value) => sum + value) + 16}
               </Wrapper.SumTotal>
             </Wrapper.TextFlexer>
-            <Wrapper.CheckoutBtn onClick={() => navigate("/shop/checkout")}>
+            <Wrapper.CheckoutBtn
+              onClick={() => {
+                navigate("/shop/checkout");
+                dispatch(
+                  setTotal(
+                    cardData.length > 0 &&
+                      cardData
+                        ?.map((value) => value.price * value.quantity)
+                        ?.reduce((sum, value) => sum + value)
+                  )
+                );
+              }}
+            >
               Proceed To Checkout
             </Wrapper.CheckoutBtn>
             <Wrapper.ShoppingBtn>Continue shopping</Wrapper.ShoppingBtn>

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { data } from "../mock/Categories/data";
-import flower6 from "../assets/imgs/flower6.png";
 import flower1 from "../assets/imgs/flower1.png";
+import { mockData } from "../mock/mock";
 
 export let Slices = createSlice({
   name: "slices",
@@ -13,6 +13,8 @@ export let Slices = createSlice({
     count: 1,
     cardData: [],
     quantity: 1,
+    total: 0,
+    searchedData: mockData,
   },
 
   reducers: {
@@ -75,6 +77,7 @@ export let Slices = createSlice({
     },
     addCardData(state, action) {
       state.cardData = state.cardData.concat(action.payload);
+
       state.count = 1;
     },
     increaseQuantity(state, action) {
@@ -100,6 +103,16 @@ export let Slices = createSlice({
         (value) => value.id !== action.payload.id
       );
     },
+    setTotal(state, action) {
+      state.total = action.payload;
+    },
+
+    setSearchedData(state, action) {
+      let filteredData = state.searchedData.filter((value) =>
+        value.name.toLowerCase().includes(action.payload)
+      );
+      state.searchedData = filteredData;
+    },
   },
 });
 export let {
@@ -119,5 +132,8 @@ export let {
   increaseQuantity,
   decreaseQuantity,
   deleteCardData,
+  setTotal,
+  setSearching,
+  setSearchedData,
 } = Slices.actions;
 export default Slices.reducer;

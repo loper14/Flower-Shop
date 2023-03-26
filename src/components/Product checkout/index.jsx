@@ -7,10 +7,12 @@ import payImg from "../../assets/imgs/partners.png";
 import Blog from "../../components/Home/Blog";
 import Footer from "../../components/Home/Footer";
 import modalImg from "../../assets/imgs/thanks.png";
+import { useNavigate } from "react-router-dom";
 
 const ProductCheckout = () => {
-  let { cardData } = useSelector((state) => state.data);
+  let { cardData, total } = useSelector((state) => state.data);
   let [checked, setChecked] = useState(false);
+  let navigate = useNavigate();
   let [radio, setRadio] = useState("1");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -53,11 +55,19 @@ const ProductCheckout = () => {
             </Wrapper.ModalHeadItem>
             <Wrapper.ModalHeadItem>
               <Wrapper.HeadTitle>Total</Wrapper.HeadTitle>
-              <Wrapper.HeadText>2,699.00</Wrapper.HeadText>
+              <Wrapper.HeadText>${total + 16}</Wrapper.HeadText>
             </Wrapper.ModalHeadItem>
             <Wrapper.ModalHeadItem isEnd={true}>
               <Wrapper.HeadTitle>Payment Method</Wrapper.HeadTitle>
-              <Wrapper.HeadText>Cash on delivery</Wrapper.HeadText>
+              <Wrapper.HeadText>
+                {radio === 1 ? (
+                  <Wrapper.PayImg small={true} src={payImg} />
+                ) : radio === 2 ? (
+                  "Dorect bank transfer"
+                ) : (
+                  "Cash on delivery"
+                )}
+              </Wrapper.HeadText>
             </Wrapper.ModalHeadItem>
           </Wrapper.ModalHead>
           <Wrapper.BottomTitle>Order Details</Wrapper.BottomTitle>
@@ -77,9 +87,11 @@ const ProductCheckout = () => {
                 </Wrapper.ProductDetailName>
               </div>
               <Wrapper.ProductDetailQty style={{ marginLeft: "25px" }}>
-                (x2)
+                x({value.quantity})
               </Wrapper.ProductDetailQty>
-              <Wrapper.ProductDetailTotal>$21555</Wrapper.ProductDetailTotal>
+              <Wrapper.ProductDetailTotal>
+                ${value.price * value.quantity}
+              </Wrapper.ProductDetailTotal>
             </Wrapper.ProductDetail>
           ))}
           <Wrapper.Space>
@@ -89,7 +101,9 @@ const ProductCheckout = () => {
             </Wrapper.SpaceTexts>
             <Wrapper.SpaceTexts>
               <Wrapper.SpaceText2>Total</Wrapper.SpaceText2>
-              <Wrapper.ProductDetailTotal>$16.00</Wrapper.ProductDetailTotal>
+              <Wrapper.ProductDetailTotal>
+                ${total + 16}
+              </Wrapper.ProductDetailTotal>
             </Wrapper.SpaceTexts>
           </Wrapper.Space>
           <Wrapper.Message>
@@ -97,7 +111,14 @@ const ProductCheckout = () => {
             confirmation email shortly with the expected delivery date for your
             items.
           </Wrapper.Message>
-          <Wrapper.TrackOrder>Track your order</Wrapper.TrackOrder>
+          <Wrapper.TrackOrder
+            onClick={() => {
+              handleCancel();
+              navigate("/");
+            }}
+          >
+            Track your order
+          </Wrapper.TrackOrder>
         </Wrapper.ModalContainer>
       </Modal>
       <Wrapper.Container>
@@ -212,7 +233,7 @@ const ProductCheckout = () => {
                   {value.name}
                 </Wrapper.OrderProductName>
                 <Wrapper.OrderProductCount>
-                  (x{value.id * 3})
+                  x({value.quantity})
                 </Wrapper.OrderProductCount>
                 <Wrapper.OrderProductPrice>
                   ${value.price}
@@ -225,7 +246,7 @@ const ProductCheckout = () => {
             </Wrapper.SuggestText1>
             <Wrapper.TextFlexer>
               <Wrapper.Div>Subtotal</Wrapper.Div>
-              <Wrapper.Sum>$2,683.00</Wrapper.Sum>
+              <Wrapper.Sum>${total}</Wrapper.Sum>
             </Wrapper.TextFlexer>
             <Wrapper.TextFlexer>
               <Wrapper.Div>Coupon Discount</Wrapper.Div>
@@ -238,7 +259,7 @@ const ProductCheckout = () => {
             <Wrapper.ChargeText>View shipping charge</Wrapper.ChargeText>
             <Wrapper.TextFlexer>
               <Wrapper.Sum>Total</Wrapper.Sum>
-              <Wrapper.SumTotal>$2,699.00</Wrapper.SumTotal>
+              <Wrapper.SumTotal>${total + 16}</Wrapper.SumTotal>
             </Wrapper.TextFlexer>
             <Wrapper.PayTitle>Payment Methods</Wrapper.PayTitle>
             <Wrapper.PayMethod>

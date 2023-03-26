@@ -12,7 +12,7 @@ const MyProducts = () => {
       <Wrapper.Top>
         <Wrapper.TopText>Products</Wrapper.TopText>
         <Wrapper.TopText>Date</Wrapper.TopText>
-        <Wrapper.TopText>Actionn</Wrapper.TopText>
+        <Wrapper.TopText>Action</Wrapper.TopText>
       </Wrapper.Top>
       {cardData.map((value) => (
         <Wrapper.Bottom key={value.id}>

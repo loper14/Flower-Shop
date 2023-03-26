@@ -42,9 +42,9 @@ const SignUp = () => {
         localStorage.setItem("email", userInfo.email);
         localStorage.setItem("password", userInfo.password);
         localStorage.setItem("phoneNumber", userInfo.phoneNumber);
+        localStorage.setItem("signed", true);
         openNotificationSuccess("success");
         dispatch(showModal());
-        dispatch(setSigned());
         navigate("/profile");
         setLoader(false);
       } else {
@@ -84,7 +84,6 @@ const SignUp = () => {
         <Input
           style={{ width: "350px", height: "40px" }}
           placeholder="Phone number"
-          type="number"
           onChange={(e) =>
             setUserInfo({ ...userInfo, phoneNumber: e.target.value })
           }

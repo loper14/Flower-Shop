@@ -5,14 +5,40 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 
-export let Wrapper = styled.div``;
+export let Wrapper = styled.div`
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 Wrapper.ProductSections = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1450px) {
+    justify-content: start;
+    align-items: center;
+    grid-gap: 270px;
+  }
+  @media (max-width: 1150px) {
+    grid-gap: 380px;
+  }
+  @media (max-width: 740px) {
+    grid-gap: 200px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: 570px) {
+    grid-gap: 70px;
+  }
 `;
 Wrapper.ProductSection = styled.div`
   display: flex;
   grid-gap: 37px;
+  @media (max-width: 740px) {
+    width: 250px;
+    grid-gap: 20px;
+  }
 `;
 Wrapper.ProductSectionTitle = styled.div`
   font-style: normal;
@@ -21,10 +47,22 @@ Wrapper.ProductSectionTitle = styled.div`
   line-height: 16px;
   cursor: pointer;
   margin-bottom: 5px;
+  @media (max-width: 740px) {
+    font-size: 13px;
+  }
+`;
+Wrapper.ProductSort2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
 `;
 Wrapper.ProductSort = styled.div`
   display: flex;
   grid-gap: 8px;
+  align-items: center;
+  @media (max-width: 1150px) {
+    display: none;
+  }
 `;
 Wrapper.DropDown = styled.div`
   font-family: "Poppins", sans-serif;
@@ -51,11 +89,30 @@ Wrapper.CardContainer = styled.div`
   grid-column-gap: 150px;
   grid-row-gap: 50px;
   margin-top: 30px;
+  @media (max-width: 1450px) {
+    width: 1000px;
+    grid-column-gap: 70px;
+    grid-row-gap: 25px;
+  }
+  @media (max-width: 1150px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 120px;
+    justify-content: center;
+    height: auto;
+  }
+  @media (max-width: 740px) {
+    grid-template-columns: auto;
+    width: 400px;
+  }
 `;
 Wrapper.ProductCard = styled.div`
   width: 220px;
   height: 350px;
-
+  @media (max-width: 570px) {
+    width: 200px;
+    height: 330px;
+  }
   :hover {
     .hoverItem {
       display: flex;
@@ -66,6 +123,10 @@ Wrapper.ProductCard = styled.div`
 Wrapper.CardImg = styled.img`
   width: 230px;
   height: 230px;
+  @media (max-width: 570px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 Wrapper.Sale = styled.div`
   font-family: "Poppins", sans-serif;
@@ -85,6 +146,9 @@ Wrapper.ProductName = styled.div`
   line-height: 16px;
   color: rgb(61, 61, 61);
   white-space: nowrap;
+  @media (max-width: 570px) {
+    font-size: 13px;
+  }
 `;
 Wrapper.Space = styled.div`
   display: flex;
@@ -97,6 +161,9 @@ Wrapper.ProductDate = styled.div`
   font-size: 12px;
   line-height: 16px;
   color: rgb(61, 61, 61);
+  @media (max-width: 570px) {
+    font-size: 10px;
+  }
 `;
 Wrapper.ProductPrice = styled.div`
   font-family: "Poppins", sans-serif;
@@ -133,7 +200,7 @@ Wrapper.HoverItem1 = styled(ShoppingCartOutlined)`
 Wrapper.HoverItem2 = styled(HeartOutlined)`
   width: 35px;
   height: 35px;
-  background: ${({ wish }) => (wish ? "red" : "#ffffff")};
+  background-color: #fff;
   border-radius: 4px;
   box-shadow: 1px 1px 5px black;
   padding-top: 10px;
@@ -154,5 +221,11 @@ Wrapper.HoverItem3 = styled(SearchOutlined)`
 
   :hover {
     color: #46a358;
+  }
+`;
+Wrapper.SetImg = styled.img`
+  display: none;
+  @media (max-width: 1150px) {
+    display: flex;
   }
 `;

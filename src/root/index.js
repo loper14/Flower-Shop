@@ -6,18 +6,45 @@ import ProductView from "../components/Product view";
 import ProductCard from "../components/Product Card";
 import ProductCheckout from "../components/Product checkout";
 import Profile from "../components/Profile";
+import { Empty } from "antd";
+import Search from "../components/Search";
 const Root = () => {
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
         <Route path="/" element={<Home />}></Route>
         <Route path="/product_view" element={<ProductView />}></Route>
-        <Route path="/shop" element={<h1>Welcome To shop</h1>}></Route>
-        <Route path="/plant" element={<h1>Welcome To Plant care</h1>}></Route>
-        <Route path="/blogs" element={<h1>Welcome To Blogs</h1>}></Route>
+        <Route
+          path="/shop"
+          element={
+            <Empty
+              style={{ marginTop: "200px" }}
+              description="'Shop' is coming soon"
+            />
+          }
+        ></Route>
+        <Route
+          path="/plant"
+          element={
+            <Empty
+              style={{ marginTop: "200px" }}
+              description="'Plant care' is coming soon"
+            />
+          }
+        ></Route>
+        <Route
+          path="/blogs"
+          element={
+            <Empty
+              style={{ marginTop: "200px" }}
+              description="'Blogs' is coming soon"
+            />
+          }
+        ></Route>
         <Route path="/shop/card" element={<ProductCard />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/shop/checkout" element={<ProductCheckout />}></Route>
+        <Route path="/search" element={<Search />}></Route>
       </Route>
       <Route path="*" element={<NotFound />}></Route>
     </Routes>

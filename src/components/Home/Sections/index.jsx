@@ -4,7 +4,7 @@ import Products from "./Products";
 
 const Sections = () => {
   return (
-    <Wrapper>
+    <Wrapper id="shopnow">
       <Actions />
       <Products />
     </Wrapper>

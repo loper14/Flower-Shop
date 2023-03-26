@@ -158,7 +158,7 @@ Wrapper.PayMethod = styled.div`
   float: right;
 `;
 Wrapper.PayImg = styled.img`
-  width: 224px;
+  width: ${({ small }) => (small ? "170px" : "224px")};
   height: 26px;
 `;
 Wrapper.PayText = styled.div``;
@@ -252,6 +252,7 @@ Wrapper.ProductDetailName = styled.div`
   font-size: 16px;
   line-height: 16px;
   color: #3d3d3d;
+  width: 165px;
 `;
 Wrapper.ProductDetailQty = styled.div`
   font-style: normal;
@@ -259,6 +260,7 @@ Wrapper.ProductDetailQty = styled.div`
   font-size: 14px;
   line-height: 16px;
   color: #727272;
+  margin-right: 50px;
 `;
 Wrapper.ProductDetailTotal = styled.div`
   font-style: normal;

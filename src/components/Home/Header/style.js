@@ -10,6 +10,12 @@ export let Wrapper = styled.div`
     rgba(245, 245, 245, 0.5) -23.46%,
     rgba(245, 245, 245, 0.5) 107.51%
   );
+  @media (max-width: 1450px) {
+    width: 1100px;
+  }
+  @media (max-width: 1150px) {
+    width: 700px;
+  }
 `;
 
 Wrapper.Header = styled.div`
@@ -17,10 +23,21 @@ Wrapper.Header = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 300px;
+  @media (max-width: 1150px) {
+    grid-gap: 10px;
+    width: 700px;
+  }
+  @media (max-width: 700px) {
+    grid-gap: 10px;
+    width: 350px;
+  }
 `;
 Wrapper.HeaderText = styled.div`
   width: 600px;
   padding-left: 40px;
+  @media (max-width: 1150px) {
+    width: 400px;
+  }
 `;
 Wrapper.HeaderTextSmall = styled.div`
   font-family: "Poppins", sans-serif;
@@ -31,6 +48,9 @@ Wrapper.HeaderTextSmall = styled.div`
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #3d3d3d;
+  @media (max-width: 1150px) {
+    font-size: 12px;
+  }
 `;
 Wrapper.HeaderTitle = styled.div`
   font-family: "Poppins", sans-serif;
@@ -40,6 +60,20 @@ Wrapper.HeaderTitle = styled.div`
   line-height: 70px;
   text-transform: uppercase;
   color: #3d3d3d;
+  @media (max-width: 1150px) {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  @media (max-width: 1450px) {
+    font-size: 45px;
+    width: 300px;
+    line-height: 55px;
+  }
+  @media (max-width: 700px) {
+    font-size: 25px;
+    width: 150px;
+    line-height: 35px;
+  }
 `;
 Wrapper.SeparateWord = styled.div`
   color: #46a358;
@@ -52,6 +86,13 @@ Wrapper.HeaderDescription = styled.div`
   font-size: 14px;
   line-height: 24px;
   color: #727272;
+  @media (max-width: 1150px) {
+    font-size: 12px;
+  }
+  @media (max-width: 700px) {
+    font-size: 10px;
+    line-height: 20px;
+  }
 `;
 Wrapper.HeaderButton = styled.button`
   width: 140px;
@@ -67,9 +108,37 @@ Wrapper.HeaderButton = styled.button`
   color: #ffffff;
   border: none;
   margin-top: 44px;
+  @media (max-width: 1150px) {
+    font-size: 14px;
+    width: 110px;
+    height: 35px;
+    margin-top: 25px;
+  }
+  @media (max-width: 700px) {
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+  }
 `;
-Wrapper.HeaderImg = styled.div``;
+Wrapper.HeaderImg = styled.div`
+  @media (max-width: 1150px) {
+    width: 350px;
+    height: 350px;
+  }
+`;
 Wrapper.HeaderImg1 = styled.img`
   width: 500px;
   height: 400px;
+  @media (max-width: 1150px) {
+    width: 230px;
+    height: 230px;
+  }
+  @media (max-width: 1450px) {
+    width: 400px;
+    height: 300px;
+  }
+  @media (max-width: 700px) {
+    width: 200px;
+    height: 200px;
+  }
 `;

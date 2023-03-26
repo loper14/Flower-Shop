@@ -18,7 +18,9 @@ const Header = () => {
             trendy plants. Use our plants to create an unique Urban Jungle.
             Order your favorite plants!
           </Wrapper.HeaderDescription>
-          <Wrapper.HeaderButton>SHOP NOW</Wrapper.HeaderButton>
+          <a href="#shopnow">
+            <Wrapper.HeaderButton>SHOP NOW</Wrapper.HeaderButton>
+          </a>
         </Wrapper.HeaderText>
         <Wrapper.HeaderImg>
           <Wrapper.HeaderImg1 src={flower} />

@@ -4,7 +4,13 @@ import { Slider } from "antd";
 export let Wrapper = styled.div`
   background: #fbfbfb;
   width: 400px;
-  height: 1212px;
+  height: ${({ isA }) => (isA ? "1252px" : "900px")};
+  @media (max-width: 1450px) {
+    width: 270px;
+  }
+  @media (max-width: 1150px) {
+    display: ${({ isA }) => (isA ? "none" : "block")};
+  }
 `;
 Wrapper.Categories = styled.div``;
 Wrapper.CategoriesTitle = styled.div`
@@ -25,6 +31,9 @@ Wrapper.CategoryItem = styled.div`
   margin-bottom: 25px;
   padding: 8px;
   cursor: pointer;
+  @media (max-width: 1450px) {
+    grid-gap: 60px;
+  }
   ${(props) =>
     !props.active
       ? `:hover {
@@ -49,12 +58,18 @@ Wrapper.CategoryItemTitle = styled.div`
   line-height: 16px;
   width: 130px;
   padding-left: 25px;
+  @media (max-width: 1450px) {
+    font-size: 14px;
+  }
 `;
 Wrapper.CategoryItemCount = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  @media (max-width: 1450px) {
+    font-size: 13px;
+  }
 `;
 Wrapper.Range = styled.div``;
 Wrapper.RangeTitle = styled.div`
@@ -135,6 +150,9 @@ Wrapper.SizeItem = styled.div`
   height: 35px;
   margin-bottom: 7px;
   cursor: pointer;
+  @media (max-width: 1450px) {
+    grid-gap: 100px;
+  }
   ${(props) =>
     !props.active
       ? `:hover {
@@ -155,9 +173,12 @@ Wrapper.SizeTitle = styled.div`
   transition: all 0.3s ease;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
   line-height: 40px;
+  font-size: 15px;
   width: 56px;
+  @media (max-width: 1450px) {
+    font-size: 14px;
+  }
 `;
 Wrapper.SizeCount = styled.div`
   font-style: normal;
@@ -166,8 +187,14 @@ Wrapper.SizeCount = styled.div`
   line-height: 40px;
   text-align: right;
   width: 30px;
+  @media (max-width: 1450px) {
+    font-size: 13px;
+  }
 `;
 Wrapper.SaleImg = styled.img`
   transform: scaleY(0.8);
   margin-top: -40px;
+  @media (max-width: 1450px) {
+    width: 270px;
+  }
 `;

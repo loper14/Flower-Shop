@@ -30,6 +30,11 @@ const Right = ({ data }) => {
     });
   };
 
+  let addToCard = () => {
+    let res = cardData.some((value) => value.id === data.id);
+    if (!res) dispatch(addCardData({ ...data, quantity: count }));
+  };
+
   return (
     <Wrapper>
       <Wrapper.Head>
@@ -96,8 +101,8 @@ const Right = ({ data }) => {
             <Wrapper.AddBtn
               onClick={() => {
                 openNotificationWithIcon("success", "topLeft");
-                dispatch(addCardData({ ...data, quantity: count }));
                 navigate("/");
+                addToCard();
               }}
             >
               Add to card

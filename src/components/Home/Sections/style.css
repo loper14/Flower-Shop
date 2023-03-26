@@ -1,7 +1,25 @@
+* {
+  scroll-behavior: smooth;
+}
 .activePr {
   border-bottom: 3px solid #46a358;
   color: #46a358;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   padding-bottom: 5px;
+}
+.paginatio {
+  float: right;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+@media (max-width: 1450px) {
+  .paginatio {
+    margin-right: 250px;
+  }
+}
+@media (max-width: 1150px) {
+  .paginatio {
+    margin-right: 50px;
+  }
 }

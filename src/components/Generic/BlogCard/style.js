@@ -3,6 +3,9 @@ import styled from "styled-components";
 export let Wrapper = styled.div`
   width: 335px;
   background: #fbfbfb;
+  @media (max-width: 450px) {
+    width: 255px;
+  }
 `;
 Wrapper.CardImg = styled.img`
   width: 100%;

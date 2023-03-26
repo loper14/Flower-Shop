@@ -15,7 +15,7 @@ const Blog = ({ show }) => {
       {!show ? (
         <>
           {" "}
-          <Wrapper.Title>Our Blog Posts</Wrapper.Title>
+          <Wrapper.Title>Our Blog Post</Wrapper.Title>
           <Wrapper.Text>
             We are an online plant shop offering a wide range of cheap and
             trendy plants.

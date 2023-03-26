@@ -7,13 +7,30 @@ Wrapper.Head = styled.div`
   padding-left: 20px;
   background: rgba(70, 163, 88, 0.1);
   height: 88px;
+  @media (max-width: 1450px) {
+    grid-gap: 65px;
+  }
+  @media (max-width: 1150px) {
+    grid-gap: 5px;
+    font-size: 11px;
+  }
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
 `;
 Wrapper.HeadLogo = styled.div`
   display: flex;
   align-items: center;
   grid-gap: 5px;
 `;
-Wrapper.HeadLogoImg = styled.img``;
+Wrapper.HeadLogoImg = styled.img`
+  @media (max-width: 700px) {
+    width: 25px;
+    height: 25px;
+  }
+`;
 Wrapper.HeadLogoText = styled.div``;
 Wrapper.HeadItem = styled.div`
   display: flex;
@@ -24,7 +41,11 @@ Wrapper.HeadItemImg = styled.img`
   width: 20px;
   height: 20px;
 `;
-Wrapper.HeadItemText = styled.div``;
+Wrapper.HeadItemText = styled.div`
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+`;
 Wrapper.Body = styled.div`
   background: #fbfbfb;
   height: 236px;
@@ -32,8 +53,25 @@ Wrapper.Body = styled.div`
   padding-left: 23px;
   justify-content: center;
   grid-gap: 250px;
+  @media (max-width: 1450px) {
+    grid-gap: 150px;
+  }
+  @media (max-width: 1150px) {
+    grid-gap: 40px;
+  }
+  @media (max-width: 700px) {
+    height: 476px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
 `;
-Wrapper.BodyItem = styled.div``;
+
+Wrapper.BodyItem = styled.div`
+  @media (max-width: 700px) {
+    height: 30px;
+  }
+`;
 Wrapper.BodyItemTitle = styled.div`
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -43,6 +81,9 @@ Wrapper.BodyItemTitle = styled.div`
   color: #3d3d3d;
   margin-bottom: 8px;
   margin-top: 32px;
+  @media (max-width: 1150px) {
+    font-size: 14px;
+  }
 `;
 Wrapper.BodyItemText = styled.div`
   font-style: normal;
@@ -53,6 +94,9 @@ Wrapper.BodyItemText = styled.div`
   cursor: pointer;
   :hover {
     text-decoration: underline;
+  }
+  @media (max-width: 1150px) {
+    font-size: 12px;
   }
 `;
 Wrapper.BodyMedia = styled.div`
@@ -78,6 +122,9 @@ Wrapper.WeAccept = styled.div`
 `;
 Wrapper.BodyPartners = styled.img`
   margin-top: 13px;
+  @media (max-width: 700px) {
+    width: 200px;
+  }
 `;
 Wrapper.End = styled.div`
   font-family: "serif";

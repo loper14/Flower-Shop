@@ -8,7 +8,6 @@ export let Wishlist = createSlice({
   reducers: {
     setWishlist(state, action) {
       state.wishlist = [...state.wishlist, action.payload];
-      console.log(state.wishlist);
     },
   },
 });
