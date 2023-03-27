@@ -27,12 +27,14 @@ Wrapper.CategoriesTitle = styled.div`
 Wrapper.Category = styled.div``;
 Wrapper.CategoryItem = styled.div`
   display: flex;
-  grid-gap: 120px;
+  grid-gap: 110px;
   margin-bottom: 25px;
   padding: 8px;
+  width: 340px;
   cursor: pointer;
   @media (max-width: 1450px) {
     grid-gap: 60px;
+    width: 270px;
   }
   ${(props) =>
     !props.active

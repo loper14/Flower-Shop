@@ -132,7 +132,7 @@ const Products = () => {
           >
             <Option value="default">Default</Option>
             <Option value="cheapest">Cheapest</Option>
-            <Option value="most-expensive">Most expensive</Option>
+            <Option value="most-expensive">Most expensiv</Option>
           </Select>
         </Wrapper.ProductSort>
         <Wrapper.SetImg onClick={showDrawer} src={setImg} />

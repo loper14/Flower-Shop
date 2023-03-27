@@ -39,15 +39,18 @@ const Right = ({ data }) => {
     <Wrapper>
       <Wrapper.Head>
         <Wrapper.HeadLeft>
-          <Wrapper.Title onClick={() => openNotificationWithIcon("success")}>
-            {data.name}
-          </Wrapper.Title>
+          <Wrapper.Title>{data.name}</Wrapper.Title>
           <Wrapper.Price>${data.price}</Wrapper.Price>
         </Wrapper.HeadLeft>
         <Wrapper.HeadRight>
           <Wrapper.Stars>
-            <Rate tooltips={desc} onChange={setValue} value={value} />
-            <Wrapper.Span>19 Customer Review</Wrapper.Span>
+            <Rate
+              className="rate"
+              tooltips={desc}
+              onChange={setValue}
+              value={value}
+            />
+            <Wrapper.Span>19 Customer Revie</Wrapper.Span>
           </Wrapper.Stars>
         </Wrapper.HeadRight>
       </Wrapper.Head>

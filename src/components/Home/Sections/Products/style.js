@@ -16,6 +16,7 @@ Wrapper.ProductSections = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   @media (max-width: 1450px) {
     justify-content: start;
     align-items: center;
@@ -25,8 +26,9 @@ Wrapper.ProductSections = styled.div`
     grid-gap: 380px;
   }
   @media (max-width: 740px) {
-    grid-gap: 200px;
+    grid-gap: 170px;
     margin-bottom: 50px;
+    justify-content: center;
   }
   @media (max-width: 570px) {
     grid-gap: 70px;
@@ -36,8 +38,8 @@ Wrapper.ProductSection = styled.div`
   display: flex;
   grid-gap: 37px;
   @media (max-width: 740px) {
-    width: 250px;
-    grid-gap: 20px;
+    grid-gap: 15px;
+    white-space: nowrap;
   }
 `;
 Wrapper.ProductSectionTitle = styled.div`
@@ -49,6 +51,9 @@ Wrapper.ProductSectionTitle = styled.div`
   margin-bottom: 5px;
   @media (max-width: 740px) {
     font-size: 13px;
+  }
+  @media (max-width: 700px) {
+    font-size: 11px;
   }
 `;
 Wrapper.ProductSort2 = styled.div`
