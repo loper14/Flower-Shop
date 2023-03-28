@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export let Wrapper = styled.div`
   padding-top: 127px;
+  /* .carousel-inner {
+    display: grid;
+    grid-template-columns: auto;
+  } */
 `;
 Wrapper.Head = styled.div`
   width: 100%;
@@ -24,6 +28,15 @@ Wrapper.Bottom = styled.div`
 Wrapper.BottomContainer = styled.div`
   display: flex;
   grid-gap: 30px;
+  @media (max-width: 1150px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: auto;
+    grid-gap: 10px;
+  }
 `;
 Wrapper.BottomItem = styled.div`
   width: 300px;
@@ -56,6 +69,9 @@ Wrapper.BottomItemDesc = styled.div`
 Wrapper.BottomForm = styled.div`
   padding-left: 40px;
   padding-top: 30px;
+  @media (max-width: 700px) {
+    padding-left: 10px;
+  }
 `;
 Wrapper.FormTitle = styled.div`
   margin-bottom: 15px;
@@ -75,4 +91,9 @@ Wrapper.FormDesc = styled.div`
   line-height: 22px;
   color: #727272;
   padding-top: 25px;
+  @media (max-width: 700px) {
+    font-weight: 300;
+    width: 300px;
+    margin-bottom: 30px;
+  }
 `;

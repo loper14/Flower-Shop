@@ -10,6 +10,9 @@ Wrapper.Container = styled.div`
   @media (max-width: 1150px) {
     width: 700px;
   }
+  @media (max-width: 700px) {
+    width: 350px;
+  }
 `;
 Wrapper.Wrap = styled.div`
   display: flex;

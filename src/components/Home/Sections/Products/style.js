@@ -230,6 +230,7 @@ Wrapper.HoverItem3 = styled(SearchOutlined)`
 `;
 Wrapper.SetImg = styled.img`
   display: none;
+  cursor: pointer;
   @media (max-width: 1150px) {
     display: flex;
   }

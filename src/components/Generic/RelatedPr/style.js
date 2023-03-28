@@ -4,9 +4,19 @@ export let CardContainer = styled.div`
   display: flex;
   grid-gap: 30px;
   justify-content: center;
+  @media (max-width: 700px) {
+    grid-gap: 50px;
+  }
 `;
 CardContainer.Card = styled.div``;
-CardContainer.Img = styled.img``;
+CardContainer.Img = styled.img`
+  @media (max-width: 1450px) {
+    width: 200px;
+  }
+  @media (max-width: 700px) {
+    width: 250px;
+  }
+`;
 CardContainer.Title = styled.div`
   font-style: normal;
   font-weight: 400;
