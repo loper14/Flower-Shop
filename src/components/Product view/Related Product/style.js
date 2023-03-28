@@ -19,6 +19,9 @@ Wrapper.Title = styled.div`
   font-size: 17px;
   line-height: 16px;
   color: #46a358;
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `;
 Wrapper.Bottom = styled.div`
   background: #fbfbfb;
@@ -45,6 +48,9 @@ Wrapper.BottomItem = styled.div`
   padding-right: 5px;
   border-right: ${({ isEnd }) =>
     !isEnd ? "1px solid rgba(70, 163, 88, 0.1)" : ""};
+  @media (max-width: 700px) {
+    padding-left: 55px;
+  }
 `;
 Wrapper.BottomItemImg = styled.img`
   width: 130px;
@@ -94,6 +100,6 @@ Wrapper.FormDesc = styled.div`
   @media (max-width: 700px) {
     font-weight: 300;
     width: 300px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 `;
