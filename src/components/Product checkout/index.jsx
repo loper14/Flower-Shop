@@ -73,9 +73,7 @@ const ProductCheckout = () => {
           <Wrapper.BottomTitle>Order Details</Wrapper.BottomTitle>
           <Wrapper.BottomTexts>
             <Wrapper.BottomText>Products</Wrapper.BottomText>
-            <Wrapper.BottomText style={{ marginLeft: "170px" }}>
-              Qty
-            </Wrapper.BottomText>
+            <Wrapper.BottomText>Qty</Wrapper.BottomText>
             <Wrapper.BottomText>Subtotal</Wrapper.BottomText>
           </Wrapper.BottomTexts>
           {cardData.map((value) => (
@@ -107,7 +105,7 @@ const ProductCheckout = () => {
             </Wrapper.SpaceTexts>
           </Wrapper.Space>
           <Wrapper.Message>
-            Your order is currently being processed. You will receive an order
+            Your order is currently being processed. Yo will receive an order
             confirmation email shortly with the expected delivery date for your
             items.
           </Wrapper.Message>

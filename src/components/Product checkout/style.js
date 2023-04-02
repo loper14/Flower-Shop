@@ -255,6 +255,12 @@ Wrapper.OrderBtn = styled.div`
 Wrapper.ModalContainer = styled.div`
   width: 550px;
   margin: 0 auto;
+  @media (max-width: 650px) {
+    width: 380px;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+  }
 `;
 Wrapper.ModalTop = styled.div`
   text-align: center;
@@ -275,12 +281,26 @@ Wrapper.ModalHead = styled.div`
   margin-top: 15px;
   border-bottom: 1px solid rgba(70, 163, 88, 0.2);
   padding-bottom: 18px;
+  @media (max-width: 650px) {
+    width: 400px;
+    margin: 15px auto;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    border: none;
+  }
 `;
 Wrapper.ModalHeadItem = styled.div`
   width: 200px;
   border-right: ${({ isEnd }) =>
     !isEnd ? " 1px solid rgba(70, 163, 88, 0.2)" : ""};
   padding-left: 15px;
+  @media (max-width: 480px) {
+    border: none;
+    padding-left: 5px;
+  }
 `;
 Wrapper.HeadTitle = styled.div`
   font-style: normal;
@@ -289,6 +309,14 @@ Wrapper.HeadTitle = styled.div`
   line-height: 16px;
   color: #727272;
   white-space: nowrap;
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+    border: none;
+    width: 100px;
+  }
 `;
 Wrapper.HeadText = styled.div`
   font-style: normal;
@@ -298,6 +326,14 @@ Wrapper.HeadText = styled.div`
   color: #727272;
   white-space: nowrap;
   padding-top: 3px;
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+    border: none;
+    width: 100px;
+  }
 `;
 Wrapper.BottomTitle = styled.div`
   font-style: normal;
@@ -306,6 +342,10 @@ Wrapper.BottomTitle = styled.div`
   line-height: 16px;
   color: #3d3d3d;
   padding-top: 18px;
+  @media (max-width: 650px) {
+    font-size: 14px;
+    padding-left: 10px;
+  }
 `;
 Wrapper.BottomTexts = styled.div`
   display: flex;
@@ -313,6 +353,15 @@ Wrapper.BottomTexts = styled.div`
   padding-top: 12px;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
   padding-bottom: 11px;
+  @media (max-width: 650px) {
+    width: 350px;
+    margin: 0 auto;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+    grid-gap: 10px;
+    border: none;
+  }
 `;
 Wrapper.BottomText = styled.div`
   font-style: normal;
@@ -320,6 +369,12 @@ Wrapper.BottomText = styled.div`
   font-size: 16px;
   line-height: 16px;
   color: #3d3d3d;
+  @media (max-width: 650px) {
+    font-size: 15px;
+  }
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 `;
 Wrapper.ProductDetail = styled.div`
   display: flex;
@@ -327,10 +382,23 @@ Wrapper.ProductDetail = styled.div`
   align-items: center;
   margin-top: 11px;
   background: #fbfbfb;
+  @media (max-width: 650px) {
+    width: 380px;
+    margin: 11px auto;
+    justify-content: center;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+    justify-content: space-between;
+  }
 `;
 Wrapper.ProductDetailImg = styled.img`
   width: 70px;
   height: 70px;
+  @media (max-width: 480px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 Wrapper.ProductDetailName = styled.div`
   padding-left: 11px;
@@ -340,6 +408,13 @@ Wrapper.ProductDetailName = styled.div`
   line-height: 16px;
   color: #3d3d3d;
   width: 165px;
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    width: 90px;
+  }
 `;
 Wrapper.ProductDetailQty = styled.div`
   font-style: normal;
@@ -347,7 +422,11 @@ Wrapper.ProductDetailQty = styled.div`
   font-size: 14px;
   line-height: 16px;
   color: #727272;
-  margin-right: 50px;
+  position: relative;
+  right: 100px;
+  @media (max-width: 480px) {
+    right: 60px;
+  }
 `;
 Wrapper.ProductDetailTotal = styled.div`
   font-style: normal;
@@ -355,18 +434,32 @@ Wrapper.ProductDetailTotal = styled.div`
   font-size: 18px;
   line-height: 16px;
   color: #46a358;
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
 `;
 Wrapper.Space = styled.div`
   text-align: right;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
   padding-bottom: 10px;
   padding-top: 20px;
+  @media (max-width: 650px) {
+    width: 350px;
+    margin: 0 auto;
+  }
+  @media (max-width: 480px) {
+    width: 300px;
+  }
 `;
 Wrapper.SpaceTexts = styled.div`
   display: flex;
   grid-gap: 214px;
   justify-content: end;
   margin-bottom: 25px;
+  @media (max-width: 480px) {
+    grid-gap: 30px;
+    justify-content: center;
+  }
 `;
 Wrapper.SpaceText1 = styled.div`
   font-style: normal;
@@ -391,6 +484,14 @@ Wrapper.Message = styled.div`
   color: #727272;
   padding-top: 18px;
   margin-bottom: 40px;
+  @media (max-width: 650px) {
+    width: 350px;
+    padding-top: 0;
+    margin: 40px auto;
+  }
+  @media (max-width: 480px) {
+    width: 280px;
+  }
 `;
 Wrapper.TrackOrder = styled.div`
   width: 162px;

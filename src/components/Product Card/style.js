@@ -76,7 +76,10 @@ Wrapper.TableBottomItem = styled.div`
     width: 600px;
   }
   @media (max-width: 700px) {
-    width: 350px;
+    width: 330px;
+    justify-content: center;
+    padding: 0 5px;
+    margin: 11px auto;
   }
 `;
 Wrapper.ItemImg = styled.img`
@@ -108,7 +111,7 @@ Wrapper.Name = styled.div`
   color: #3d3d3d;
   @media (max-width: 700px) {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
   }
 `;
 Wrapper.Sku = styled.div``;
@@ -122,7 +125,7 @@ Wrapper.ItemPrice = styled.div`
   @media (max-width: 700px) {
     font-weight: 400;
     font-size: 13px;
-    padding-left: 20px;
+    padding-left: 5px;
   }
 `;
 Wrapper.ItemQuantity = styled.div`
@@ -277,6 +280,9 @@ Wrapper.CheckoutBtn = styled.button`
   border-radius: 3px;
   border: none;
   margin-top: 29px;
+  @media (max-width: 700px) {
+    font-size: 13px;
+  }
 `;
 Wrapper.ShoppingBtn = styled.div`
   font-style: normal;
