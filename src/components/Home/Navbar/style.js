@@ -111,6 +111,11 @@ Wrapper.Count = styled.div`
   padding-top: 2px;
   left: 50px;
   bottom: 6px;
+  @media (max-width: 1150px) {
+    left: 35px;
+    width: 20px;
+    height: 20px;
+  }
 `;
 Wrapper.ActionsImg2 = styled.img`
   margin-right: 40px;

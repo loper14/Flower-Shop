@@ -130,76 +130,70 @@ const ProductCheckout = () => {
                 <Wrapper.FormLabel>
                   First Name <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Last Name <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Country / Region <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Town / City <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Street Address <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input
-                  placeholder="House number and street name"
-                  style={{ width: "350px" }}
-                />
+                <Wrapper.Input placeholder="House number and street name" />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input
-                  placeholder="Appartment, suite, unit, etc. (optional)"
-                  style={{ width: "350px" }}
-                />
+                <Wrapper.Input placeholder="Appartment, suite, unit, etc. (optional)" />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   State <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Zip <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Email address <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
 
               <Wrapper.Div>
                 <Wrapper.FormLabel>
                   Phone number <Wrapper.StarImg src={star} />
                 </Wrapper.FormLabel>
-                <Input style={{ width: "350px" }} />
+                <Wrapper.Input />
               </Wrapper.Div>
             </Wrapper.FormDiv>
             <Wrapper.Label2>
@@ -262,43 +256,36 @@ const ProductCheckout = () => {
               <Wrapper.SumTotal>${total + 16}</Wrapper.SumTotal>
             </Wrapper.TextFlexer>
             <Wrapper.PayTitle>Payment Methods</Wrapper.PayTitle>
-            <Wrapper.PayMethod>
-              <Radio
-                checked={radio === 1 ? true : false}
-                onChange={() => setRadio(1)}
-              />
-              <Wrapper.PayImg src={payImg} />
-            </Wrapper.PayMethod>
-            <Wrapper.PayMethod>
-              <Radio
-                checked={radio === 2 ? true : false}
-                onChange={() => setRadio(2)}
-              />
-              <Wrapper.PayText>Dorect bank transfer</Wrapper.PayText>
-            </Wrapper.PayMethod>
-            <Wrapper.PayMethod>
-              <Radio
-                checked={radio === 3 ? true : false}
-                onChange={() => setRadio(3)}
-              />
-              <Wrapper.PayText>Cash on delivery</Wrapper.PayText>
-            </Wrapper.PayMethod>
-            {/* <Wrapper.OrderBtn>Place Order</Wrapper.OrderBtn> */}
-            <Button
-              onClick={() => setIsModalOpen(true)}
-              type="primary"
-              style={{
-                width: "405px",
-                height: "40px",
-                backgroundColor: "#46A358",
-                borderRadius: "0",
-                marginTop: "40px",
-                fontWeight: "700",
-                fontSize: "15px",
-              }}
-            >
-              Place Order
-            </Button>
+            <Wrapper.Space2>
+              <Wrapper.PayMethod>
+                <Radio
+                  checked={radio === 1 ? true : false}
+                  onChange={() => setRadio(1)}
+                />
+                <Wrapper.PayImg src={payImg} />
+              </Wrapper.PayMethod>
+              <Wrapper.PayMethod>
+                <Radio
+                  checked={radio === 2 ? true : false}
+                  onChange={() => setRadio(2)}
+                />
+                <Wrapper.PayText>Dorect bank transfer</Wrapper.PayText>
+              </Wrapper.PayMethod>
+              <Wrapper.PayMethod>
+                <Radio
+                  checked={radio === 3 ? true : false}
+                  onChange={() => setRadio(3)}
+                />
+                <Wrapper.PayText>Cash on delivery</Wrapper.PayText>
+              </Wrapper.PayMethod>
+              {/* <Wrapper.OrderBtn>Place Order</Wrapper.OrderBtn> */}
+              <Wrapper.Button
+                onClick={() => setIsModalOpen(true)}
+                type="primary"
+              >
+                Place Order
+              </Wrapper.Button>
+            </Wrapper.Space2>
           </Wrapper.Order>
         </Wrapper.Flexer>
         <Blog show={true} />

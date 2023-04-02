@@ -6,7 +6,6 @@ import {
 } from "@ant-design/icons";
 
 export let Wrapper = styled.div`
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;

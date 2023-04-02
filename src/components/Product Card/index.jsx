@@ -70,7 +70,7 @@ const ProductCard = () => {
           <Wrapper.CardTotals>
             <Wrapper.TotalsTitle>Cart Totals</Wrapper.TotalsTitle>
             <Wrapper.Div>Coupon Apply</Wrapper.Div>
-            <Input.Group compact>
+            <Input.Group className="inputgr" compact>
               <Input
                 style={{
                   width: "82%",

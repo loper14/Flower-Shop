@@ -1,14 +1,31 @@
+import { Button, Input } from "antd";
 import styled from "styled-components";
 
 export let Wrapper = styled.div``;
 Wrapper.Container = styled.div`
   width: 1400px;
   margin: 0 auto;
+  @media (max-width: 1450px) {
+    width: 1100px;
+  }
+  @media (max-width: 1150px) {
+    width: 700px;
+  }
+  @media (max-width: 700px) {
+    width: 350px;
+  }
 `;
 Wrapper.Flexer = styled.div`
   display: flex;
   grid-gap: 60px;
   justify-content: center;
+  @media (max-width: 1450px) {
+    grid-gap: 20px;
+  }
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 Wrapper.Form = styled.div``;
 Wrapper.FormTitle = styled.div`
@@ -21,10 +38,22 @@ Wrapper.FormDiv = styled.div`
   grid-gap: 0;
   grid-row-gap: 36px;
   grid-column-gap: 20px;
+  @media (max-width: 1450px) {
+    grid-template-columns: 300px 300px;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 300px;
+  }
 `;
 Wrapper.Div = styled.div``;
 Wrapper.FormLabel = styled.div`
   margin-bottom: 10px;
+`;
+Wrapper.Input = styled(Input)`
+  width: 350px;
+  @media (max-width: 1450px) {
+    width: 290px;
+  }
 `;
 Wrapper.Label2 = styled.div`
   margin-top: 20px;
@@ -33,6 +62,19 @@ Wrapper.StarImg = styled.img``;
 Wrapper.Order = styled.div`
   width: 405px;
   margin-top: 50px;
+  @media (max-width: 1150px) {
+    width: 650px;
+  }
+  @media (max-width: 700px) {
+    width: 350px;
+  }
+`;
+Wrapper.Space2 = styled.div`
+  @media (max-width: 1150px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 Wrapper.OrderTitle = styled.div`
   font-style: normal;
@@ -54,10 +96,22 @@ Wrapper.OrderProduct = styled.div`
   width: 405px;
   height: 70px;
   background: #fbfbfb;
+  @media (max-width: 1150px) {
+    width: 650px;
+    grid-gap: 70px;
+  }
+  @media (max-width: 700px) {
+    width: 350px;
+    grid-gap: 0px;
+  }
 `;
 Wrapper.OrderProductImg = styled.img`
   width: 70px;
   height: 70px;
+  @media (max-width: 700px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 Wrapper.OrderProductName = styled.div`
   margin-left: -30px;
@@ -66,6 +120,9 @@ Wrapper.OrderProductName = styled.div`
   font-size: 16px;
   line-height: 16px;
   color: #3d3d3d;
+  @media (max-width: 700px) {
+    padding-left: 40px;
+  }
 `;
 Wrapper.OrderProductCount = styled.div`
   font-style: normal;
@@ -73,6 +130,9 @@ Wrapper.OrderProductCount = styled.div`
   font-size: 14px;
   line-height: 16px;
   color: #727272;
+  @media (max-width: 700px) {
+    padding-left: 40px;
+  }
 `;
 Wrapper.OrderProductPrice = styled.div`
   font-style: normal;
@@ -80,6 +140,12 @@ Wrapper.OrderProductPrice = styled.div`
   font-size: 18px;
   line-height: 16px;
   color: #46a358;
+  @media (max-width: 1150px) {
+    padding-left: 180px;
+  }
+  @media (max-width: 700px) {
+    padding-left: 40px;
+  }
 `;
 Wrapper.SuggestText1 = styled.div`
   text-align: right;
@@ -156,12 +222,33 @@ Wrapper.PayMethod = styled.div`
   padding-left: 11px;
   margin-top: 18px;
   float: right;
+  @media (max-width: 1150px) {
+    width: 650px;
+  }
+  @media (max-width: 700px) {
+    width: 350px;
+  }
 `;
 Wrapper.PayImg = styled.img`
   width: ${({ small }) => (small ? "170px" : "224px")};
   height: 26px;
 `;
 Wrapper.PayText = styled.div``;
+Wrapper.Button = styled(Button)`
+  width: 405px;
+  height: 40px;
+  background-color: #46a358;
+  border-radius: 0;
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  @media (max-width: 1150px) {
+    width: 650px;
+  }
+  @media (max-width: 700px) {
+    width: 350px;
+  }
+`;
 Wrapper.OrderBtn = styled.div`
   background-color: red;
 `;

@@ -92,7 +92,7 @@ const Related = () => {
                   width: "270px",
                   color: "#ACACAC",
                 }}
-                defaultValue="enter your email address..."
+                placeholder="enter your email address..."
               />
               <Button
                 style={{
