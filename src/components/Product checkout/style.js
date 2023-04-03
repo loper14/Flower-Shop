@@ -261,6 +261,11 @@ Wrapper.ModalContainer = styled.div`
   @media (max-width: 480px) {
     width: 300px;
   }
+  @media (max-width: 380px) {
+    width: 260px;
+    position: relative;
+    right: 20px;
+  }
 `;
 Wrapper.ModalTop = styled.div`
   text-align: center;

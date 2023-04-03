@@ -36,7 +36,7 @@ const ProductCheckout = () => {
         <Wrapper.ModalContainer>
           <Wrapper.ModalTop>
             <Wrapper.ModalImg src={modalImg} />
-            <Wrapper.ModalText>Your order has been received</Wrapper.ModalText>
+            <Wrapper.ModalText>Your order has been receive</Wrapper.ModalText>
           </Wrapper.ModalTop>
           <Wrapper.ModalHead>
             <Wrapper.ModalHeadItem>
@@ -94,7 +94,7 @@ const ProductCheckout = () => {
           ))}
           <Wrapper.Space>
             <Wrapper.SpaceTexts>
-              <Wrapper.SpaceText1>Shipping</Wrapper.SpaceText1>
+              <Wrapper.SpaceText1>Shippin</Wrapper.SpaceText1>
               <Wrapper.SpaceText2>$16.00</Wrapper.SpaceText2>
             </Wrapper.SpaceTexts>
             <Wrapper.SpaceTexts>
