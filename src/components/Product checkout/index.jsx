@@ -1,4 +1,4 @@
-import { Button, Input, Modal, Radio } from "antd";
+import { Modal, Radio } from "antd";
 import React, { useState } from "react";
 import { Wrapper } from "./style";
 import star from "../../assets/icons/star.svg";

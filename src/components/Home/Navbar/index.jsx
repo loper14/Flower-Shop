@@ -7,8 +7,7 @@ import img3 from "../../../assets/icons/Logout.svg";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { showModal } from "../../../redux/modalSlices";
-import { Drawer, Input } from "antd";
-import { setSearchedData } from "../../../redux/slice";
+import { Drawer } from "antd";
 import humburger from "../../../assets/icons/humburger.svg";
 const Navbar = () => {
   let navigate = useNavigate();
@@ -16,7 +15,6 @@ const Navbar = () => {
   let dispatch = useDispatch();
   let signed = localStorage.getItem("signed");
   let [active, setActive] = useState("home");
-  let [isSearch, setIsSearch] = useState(false);
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -44,7 +42,6 @@ const Navbar = () => {
               Home
             </Wrapper.NavbarText>
           </NavLink>
-
           <NavLink
             style={{
               textDecoration: "none",
@@ -93,6 +90,20 @@ const Navbar = () => {
               Blogs
             </Wrapper.NavbarText>
           </NavLink>
+          <Wrapper.DrawerBtn
+            onClick={() => {
+              if (!signed) {
+                dispatch(showModal());
+              } else {
+                navigate("/profile");
+              }
+              onClose();
+            }}
+            type="primary"
+          >
+            <Wrapper.ActionsImg3 src={img3} />
+            {signed ? localStorage.getItem("username") : "Login"}
+          </Wrapper.DrawerBtn>
         </Wrapper.HumburgerMenu>
       </Drawer>
       <Wrapper.Container>
@@ -165,21 +176,7 @@ const Navbar = () => {
             </NavLink>
           </Wrapper.Navbar>
           <Wrapper.Actions>
-            {isSearch ? (
-              <Input
-                onKeyDown={(e) => e.key === "Enter" && navigate("search")}
-                placeholder="search..."
-                style={{ width: "150px" }}
-                onChange={(e) =>
-                  dispatch(setSearchedData(e.target.value.toLowerCase()))
-                }
-              />
-            ) : (
-              <Wrapper.ActionsImg1
-                onClick={() => setIsSearch(true)}
-                src={img1}
-              />
-            )}
+            <Wrapper.ActionsImg1 src={img1} />
             {cardData.length > 0 ? (
               <Wrapper.Count>{cardData.length}</Wrapper.Count>
             ) : (
@@ -197,6 +194,11 @@ const Navbar = () => {
                   navigate("/profile");
                 }
               }}
+              size={
+                signed && localStorage.getItem("username").length > 6
+                  ? true
+                  : false
+              }
               type="primary"
             >
               <Wrapper.ActionsImg3 src={img3} />{" "}

@@ -232,6 +232,9 @@ Wrapper.PayMethod = styled.div`
 Wrapper.PayImg = styled.img`
   width: ${({ small }) => (small ? "170px" : "224px")};
   height: 26px;
+  @media (max-width: 400px) {
+    width: ${({ small }) => (small ? "130px" : "224px")};
+  }
 `;
 Wrapper.PayText = styled.div``;
 Wrapper.Button = styled(Button)`
@@ -269,6 +272,11 @@ Wrapper.ModalContainer = styled.div`
 `;
 Wrapper.ModalTop = styled.div`
   text-align: center;
+  @media (max-width: 380px) {
+    width: 260px;
+    position: relative;
+    left: 20px;
+  }
 `;
 Wrapper.ModalImg = styled.img`
   margin-top: 25px;
@@ -497,6 +505,11 @@ Wrapper.Message = styled.div`
   @media (max-width: 480px) {
     width: 280px;
   }
+  @media (max-width: 380px) {
+    width: 260px;
+    position: relative;
+    left: 20px;
+  }
 `;
 Wrapper.TrackOrder = styled.div`
   width: 162px;
@@ -509,4 +522,9 @@ Wrapper.TrackOrder = styled.div`
   color: white;
   margin: 0 auto;
   cursor: pointer;
+  @media (max-width: 380px) {
+    width: 260px;
+    position: relative;
+    left: 20px;
+  }
 `;

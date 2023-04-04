@@ -23,6 +23,7 @@ const Wishlist = () => {
             <Wrapper.CardHoverItems className="hoverItem">
               <Wrapper.HoverItem1 onClick={() => addToCard(value)} />
               <Wrapper.HoverItem2 />
+
               <Wrapper.HoverItem3
                 onClick={() => {
                   dispatch(setProductData(value));

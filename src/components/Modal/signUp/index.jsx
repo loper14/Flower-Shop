@@ -60,43 +60,38 @@ const SignUp = () => {
       {contextHolder}
 
       <Wrapper.Flexer>
-        <Input
-          style={{ width: "350px", height: "40px", marginTop: "40px" }}
+        <Wrapper.Input
+          style={{ marginTop: "40px" }}
           placeholder="First name"
           onChange={(e) =>
             setUserInfo({ ...userInfo, firstName: e.target.value })
           }
         />
-        <Input
-          style={{ width: "350px", height: "40px" }}
+        <Wrapper.Input
           placeholder="Last name"
           onChange={(e) =>
             setUserInfo({ ...userInfo, lastName: e.target.value })
           }
         />
-        <Input
-          style={{ width: "350px", height: "40px" }}
+        <Wrapper.Input
           placeholder="Username"
           onChange={(e) =>
             setUserInfo({ ...userInfo, username: e.target.value })
           }
         />
-        <Input
-          style={{ width: "350px", height: "40px" }}
+        <Wrapper.Input
           placeholder="Phone number"
           onChange={(e) =>
             setUserInfo({ ...userInfo, phoneNumber: e.target.value })
           }
         />
-        <Input
+        <Wrapper.Input
           placeholder="Enter your email address"
           type="email"
-          style={{ width: "350px", height: "40px" }}
           onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
         />
-        <Input.Password
+        <Wrapper.InputPass
           placeholder="Password"
-          style={{ width: "350px", height: "40px" }}
           onChange={(e) =>
             setUserInfo({ ...userInfo, password: e.target.value })
           }
@@ -108,7 +103,7 @@ const SignUp = () => {
         </Wrapper.Btn>
       </Wrapper.Flexer>
       <Wrapper.Or>
-        <Wrapper.OrText>Or login withh</Wrapper.OrText>
+        <Wrapper.OrText>Or login with</Wrapper.OrText>
         <Wrapper.GoogleBtn>
           <Wrapper.OrImg src={google} />
           Login with Google

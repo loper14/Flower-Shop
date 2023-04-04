@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Input } from "antd";
 import styled from "styled-components";
 
 export let Wrapper = styled.div``;
@@ -26,6 +26,23 @@ Wrapper.ForgotText = styled.div`
   line-height: 16px;
   color: #46a358;
   cursor: pointer;
+  @media (max-width: 410px) {
+    padding-left: 130px;
+  }
+`;
+Wrapper.Input = styled(Input)`
+  width: 350px;
+  height: 40px;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
+`;
+Wrapper.InputPass = styled(Input.Password)`
+  width: 350px;
+  height: 40px;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
 `;
 Wrapper.Btn = styled.div`
   cursor: pointer;
@@ -41,6 +58,9 @@ Wrapper.Btn = styled.div`
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
 `;
 
 Wrapper.Or = styled.div`
@@ -74,6 +94,9 @@ Wrapper.GoogleBtn = styled.div`
   padding-top: 10px;
   margin-top: 27px;
   cursor: pointer;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
 `;
 Wrapper.FacebookBtn = styled.div`
   width: 350px;
@@ -90,4 +113,7 @@ Wrapper.FacebookBtn = styled.div`
   margin-top: 15px;
   margin-bottom: 40px;
   cursor: pointer;
+  @media (max-width: 410px) {
+    width: 300px;
+  }
 `;

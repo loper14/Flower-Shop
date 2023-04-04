@@ -137,6 +137,7 @@ Wrapper.ActionsButton = styled.div`
   grid-gap: 10px;
   color: white;
   cursor: pointer;
+  font-size: ${({ size }) => (size ? "10px" : "14px")};
   @media (max-width: 1150px) {
     display: none;
   }
@@ -146,5 +147,23 @@ Wrapper.Humburger = styled.img`
   display: none;
   @media (max-width: 1150px) {
     display: flex;
+  }
+`;
+Wrapper.DrawerBtn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 327px;
+  height: 40px;
+  background: #46a358;
+  border-radius: 6px;
+  justify-content: center;
+  cursor: pointer;
+  grid-gap: 10px;
+  color: white;
+  cursor: pointer;
+  margin: 10px auto;
+  @media (max-width: 400px) {
+    width: 300px;
   }
 `;

@@ -7,7 +7,6 @@ import ProductCard from "../components/Product Card";
 import ProductCheckout from "../components/Product checkout";
 import Profile from "../components/Profile";
 import { Empty } from "antd";
-import Search from "../components/Search";
 const Root = () => {
   return (
     <Routes>
@@ -44,7 +43,6 @@ const Root = () => {
         <Route path="/shop/card" element={<ProductCard />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/shop/checkout" element={<ProductCheckout />}></Route>
-        <Route path="/search" element={<Search />}></Route>
       </Route>
       <Route path="*" element={<NotFound />}></Route>
     </Routes>

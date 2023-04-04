@@ -43,15 +43,13 @@ const Login = () => {
       {contextHolder}
       <Wrapper.Text>Enter your username and password to login.</Wrapper.Text>
       <Wrapper.Flexer>
-        <Input
-          style={{ width: "350px", height: "40px" }}
+        <Wrapper.Input
           placeholder="almamun_uxui@outlook.com"
           onChange={(e) =>
             setLoginData({ ...loginData, email: e.target.value })
           }
         />
-        <Input.Password
-          style={{ width: "350px", height: "40px" }}
+        <Wrapper.InputPass
           onChange={(e) =>
             setLoginData({ ...loginData, password: e.target.value })
           }

@@ -4,7 +4,6 @@ import logoutbl from "../../assets/icons/logout-bl.png";
 import loca from "../../assets/icons/loca.svg";
 import bag from "../../assets/icons/bag.svg";
 import heart from "../../assets/imgs/heart.svg";
-import { Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Modal } from "antd";
@@ -41,6 +40,43 @@ const Profile = () => {
   return (
     <Wrapper>
       <Wrapper.Container>
+        <Wrapper.Sider>
+          <Wrapper.LeftTitle>My Account</Wrapper.LeftTitle>
+          <Wrapper.SiderMenu>
+            <Wrapper.SiderItem
+              onClick={() => dispatch(setAccSection("account"))}
+            >
+              <Wrapper.LeftImg src={user} />
+              Account details
+            </Wrapper.SiderItem>
+            <Wrapper.SiderItem
+              onClick={() => dispatch(setAccSection("myProducts"))}
+            >
+              <Wrapper.LeftImg src={bag} />
+              My products
+            </Wrapper.SiderItem>
+            <Wrapper.SiderItem
+              onClick={() => dispatch(setAccSection("address"))}
+            >
+              <Wrapper.LeftImg src={loca} />
+              Address
+            </Wrapper.SiderItem>
+            <Wrapper.SiderItem
+              onClick={() => dispatch(setAccSection("wishlist"))}
+            >
+              <Wrapper.LeftImg src={heart} />
+              Wishlist
+            </Wrapper.SiderItem>
+            <Wrapper.SiderLogout
+              onClick={() => {
+                showDeleteConfirm();
+              }}
+            >
+              <Wrapper.LeftImg src={logoutbl} />
+              Logout
+            </Wrapper.SiderLogout>
+          </Wrapper.SiderMenu>
+        </Wrapper.Sider>
         <Wrapper.Left>
           <Wrapper.LeftSections>
             <Wrapper.LeftTitle>My Account</Wrapper.LeftTitle>

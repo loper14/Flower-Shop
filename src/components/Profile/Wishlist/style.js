@@ -11,6 +11,16 @@ Wrapper.CardContainer = styled.div`
   grid-gap: 70px;
   width: 950px;
   flex-wrap: wrap;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  @media (max-width: 1450px) {
+    width: 650px;
+  }
+  @media (max-width: 1150px) {
+    width: 300px;
+  }
 `;
 Wrapper.ProductCard = styled.div`
   width: 260px;
@@ -26,6 +36,12 @@ Wrapper.ProductCard = styled.div`
 Wrapper.CardImg = styled.img`
   width: 250px;
   height: 250px;
+  margin-bottom: 15px;
+  @media (max-width: 450px) {
+    width: 200px;
+    height: 200px;
+    margin-left: 25px;
+  }
 `;
 Wrapper.Sale = styled.div`
   font-family: "Poppins", sans-serif;
@@ -74,7 +90,7 @@ Wrapper.CardHoverItems = styled.div`
   grid-gap: 10px;
   position: absolute;
   margin-top: -50px;
-  margin-left: 50px;
+  margin-left: 60px;
 `;
 Wrapper.HoverItem1 = styled(ShoppingCartOutlined)`
   width: 35px;
